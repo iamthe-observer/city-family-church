@@ -1,13 +1,14 @@
 <template>
-	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-SpaceGrotesk"
-		id="church">
+	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0" id="church">
 
 		<!-- welcome hero -->
-		<section class="welcome-hero w-full h-[calc(100vh-80px)] flex flex-col bg-white z-10 section0">
+		<section class="welcome-hero w-full h-[calc(100vh-64px)] flex flex-col bg-white z-10 section0">
 			<div class="w-full h-full overflow-hidden rounded-b-[70px] relative">
 				<!-- info tab -->
 				<AnimHero>
-					<InfoTab />
+					<div class="w-full h-full grid place-items-center">
+						<span class="text-[7rem] font-bold uppercase text-red-600">About Us</span>
+					</div>
 				</AnimHero>
 				<!-- bg-img -->
 				<img src="../assets/image.png" alt="" class="object-cover w-full h-full scale-125 home-img">
@@ -21,7 +22,7 @@
 		<Nav />
 
 		<!-- church summary -->
-		<section class="rounded-3xl w-full h-20 fixed p-1 px-5 z-50 bottom-0 summary">
+		<section class="rounded-3xl w-full h-16 fixed p-1 px-5 z-50 bottom-0 summary">
 			<div class="w-full h-full rounded-3xl bg-amber-500">
 			</div>
 		</section>
@@ -30,7 +31,7 @@
 		<div class="w-full h-full bg-neutral-100">
 			<section class="w-full min-h-[90vh] bg-white rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1">
 				<div class="flex-1 gap-10 flex flex-col justify-center">
-					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-PlusSans">The Head <br /> Topic</h3>
+					<h3 class="font-bold text-[4rem] pb-2 leading-snug">The Head <br /> Topic</h3>
 					<span class="w-4/5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae obcaecati
 						sit
 						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
@@ -53,28 +54,25 @@
 
 
 		<!-- message 2 -->
-		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-neutral-100 b-[100px]">
+		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-neutral-100">
 
 			<div class="animate-container overflow-hidden relative w-full h-screen">
 				<div
 					class="__circle hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0 aspect-square rounded-full border-2 border-black">
 				</div>
 
-				<div
-					class="absolute font-black text-[10rem] top-32 left-[300px] flex items-center font-BarlowCondensed italic">
+				<div class="absolute font-bold text-[5rem] top-32 left-[300px] flex gap-1 items-center">
 					<span class="born opacity-0" v-for="(letter, i) in ['BORN'].map(str => str.split('')).flat()"
 						:key="i">
 						{{ letter }}
 					</span>
 				</div>
-				<div
-					class="absolute font-black text-[10rem] top-[30%] right-[400px] flex items-center font-BarlowCondensed italic">
+				<div class="absolute font-bold text-[5rem] top-[30%] right-[400px] flex gap-1 items-center">
 					<span class="in opacity-0" v-for="(letter, i) in ['IN'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
-				<div
-					class="absolute font-black text-[10rem] bottom-32 left-1/2 -translate-x-1/2 flex items-center font-BarlowCondensed italic">
+				<div class="absolute font-bold text-[5rem] bottom-32 left-1/2 -translate-x-1/2 flex gap-1 items-center">
 					<span class="christ opacity-0" v-for="(letter, i) in ['CHRIST'].map(str => str.split('')).flat()"
 						:key="i">
 						{{ letter }}
@@ -82,7 +80,7 @@
 				</div>
 
 				<div
-					class="flex flex-col justify-center items-center font-bold text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mission opacity-0 font-PlusSans">
+					class="flex flex-col justify-center items-center font-bold text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mission opacity-0">
 					<span class="">Our Mission Is For YOU To Be</span>
 					<span class="">Be In Christ</span>
 				</div>
@@ -93,7 +91,7 @@
 		<!-- message 3 -->
 		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
 			<h1 class="text-6xl font-bold text-white bg-primary pt-16 pl-20">
-				<div class="head-text font-PlusSans">
+				<div class="head-text">
 					Quote <br />
 					Marquee
 				</div>
@@ -132,13 +130,12 @@
 </template>
 
 <script setup lang="ts">
+const { $gsap: gsap } = useNuxtApp()
 const img1 = ref()
 const img2 = ref()
 let pressed = ref(false)
 let startX = ref()
 let x = ref()
-
-const { $gsap: gsap } = useNuxtApp()
 
 function homeAnimation() {
 	const section: number = document.querySelector('.section2')!.getBoundingClientRect().height
@@ -150,9 +147,8 @@ function homeAnimation() {
 		scrollTrigger: {
 			trigger: '.section2',
 			start: 'top top',
-			end: `+=${section * 2}`,
+			end: `+=${section}`,
 			scrub: 1,
-			markers: true,
 			pin: true
 		}
 	})
@@ -205,6 +201,7 @@ onMounted(() => {
 			start: 'top top',
 			end: 'bottom top',
 			scrub: 1,
+			markers: true,
 		},
 		y: -20
 	})
@@ -314,10 +311,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.perspective {
-	perspective: 500px;
-}
-
 .Ccontainer {
 	width: 100%;
 	height: 400px;

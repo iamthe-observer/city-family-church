@@ -16,6 +16,11 @@ module.exports = {
         tertiary: '#E1ECC8',
         base: '#F7FFaa',
       },
+      fontFamily: {
+        PlusSans: ['Plus Jakarta Sans', 'sans-serif'],
+        SpaceGrotesk: ['Space Grotesk', 'sans-serif'],
+        BarlowCondensed: ['Barlow Condensed', 'sans-serif'],
+      },
     },
   },
   plugins: [],
