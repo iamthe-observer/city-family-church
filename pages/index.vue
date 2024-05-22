@@ -21,29 +21,60 @@
 		<Nav />
 
 		<!-- church summary -->
-		<section class="rounded-3xl w-full h-20 fixed p-1 px-5 z-50 bottom-0 summary">
-			<div class="w-full h-full rounded-3xl bg-amber-500">
+		<section class="w-full h-20 fixed p-1 px-5 z-50 bottom-0 summary">
+
+			<div
+				class="p-2 w-[95%] mx-auto h-full rounded-3xl backdrop-blur-md bg-black/5 flex items-center justify-between gap-2 text-sm">
+				<div class="min-w-[300px] w-fit max-w-[700px] h-full flex items-center">
+					<span class="px-3 border-r border-black font-bold">SUNDAY SERVICES</span>
+					<span class="px-3 border-x border-black font-bold">9 AM</span>
+					<span class="px-3 border-x border-black font-bold">11 AM</span>
+					<span class="px-3 border-x border-black font-bold">4 PM</span>
+					<span class="px-3 border-l border-black font-bold">WATCH ONLINE</span>
+				</div>
+				<div class="min-w-[300px] w-full max-w-[700px] h-full flex items-center">
+					<div class="marquee">
+						<div class="marquee-content">
+							<span>JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
+								HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
+								SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
+								WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN
+								MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! |
+								JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE!
+								| JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
+								HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
+								SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
+								WEEK SERVICE HERE!</span>
+						</div>
+					</div>
+				</div>
+				<div class="bg-black rounded-full h-full aspect-square"></div>
 			</div>
+
 		</section>
 
 		<!-- message -->
-		<div class="w-full h-full bg-neutral-100">
-			<section class="w-full min-h-[90vh] bg-white rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1">
-				<div class="flex-1 gap-10 flex flex-col justify-center">
-					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-PlusSans">The Head <br /> Topic</h3>
-					<span class="w-4/5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae obcaecati
+		<div class="w-full h-full bg-base">
+			<section
+				class="w-full min-h-[90vh] bg-white rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1 justify-center">
+				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
+					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-PlusSans">The Head <br />Topic</h3>
+					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae
+						obcaecati
 						sit
 						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
 				</div>
 
-				<div class="flex-1 relative">
+				<div class="flex-1 relative 1/2">
 					<!-- img1 -->
-					<div ref="img1"
-						class="absolute top-0 right-1/2 translate-x-[90%] w-80 aspect-square rounded-2xl bg-lime-500 img1">
+					<div ref="img1" class="absolute top-0 right-1/2 translate-x-[90%] w-80 aspect-square img1">
+						<img src="../assets/talk.png" alt=""
+							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
-					<div ref="img2"
-						class="absolute bottom-0 left-1/2 translate-x-[-90%] w-80 aspect-square rounded-2xl bg-lime-700 img2">
+					<div ref="img2" class="absolute bottom-0 left-1/2 translate-x-[-90%] w-80 aspect-square img2">
+						<img src="../assets/praying.png" alt=""
+							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
 
 				</div>
@@ -53,7 +84,7 @@
 
 
 		<!-- message 2 -->
-		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-neutral-100 b-[100px]">
+		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-base b-[100px]">
 
 			<div class="animate-container overflow-hidden relative w-full h-screen">
 				<div
@@ -92,13 +123,14 @@
 
 		<!-- message 3 -->
 		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
-			<h1 class="text-6xl font-bold text-white bg-primary pt-16 pl-20">
-				<div class="head-text font-PlusSans">
-					Quote <br />
-					Marquee
-				</div>
-			</h1>
-			<section class="w-full min-h-[80vh] bg-primary rounded-b-[70px] pt-10 px-10 relative">
+			<div class="w-full bg-base">
+				<h1 class="text-6xl font-black text-black bg-primary pt-16 pl-20 rounded-t-[70px]">
+					<div class="head-text font-PlusSans">
+						Lorem Text About Church
+					</div>
+				</h1>
+			</div>
+			<section class="w-full min-h-[600px] bg-primary rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
@@ -115,7 +147,7 @@
 				</div>
 			</section>
 			<!-- end quote marquee -->
-			<section class="w-full h-[40vh] bg-white py-20 pb-60">
+			<section class="w-full h-[50vh] bg-white py-20 pb-60">
 				<Marquee text="Quote Marquee" />
 			</section>
 
@@ -152,7 +184,6 @@ function homeAnimation() {
 			start: 'top top',
 			end: `+=${section * 2}`,
 			scrub: 1,
-			markers: true,
 			pin: true
 		}
 	})
@@ -236,7 +267,7 @@ onMounted(() => {
 	const imageMoveTl = gsap.timeline({
 		scrollTrigger: {
 			trigger: '.section1',
-			start: 'top 40%',
+			start: 'top bottom',
 			end: 'bottom center',
 			scrub: 1,
 		}
@@ -343,6 +374,39 @@ onMounted(() => {
 	height: 400px;
 	width: 300px;
 	border-radius: 20px;
-	background-color: lightgrey;
+	background-color: white;
+}
+
+.marquee {
+	width: 100%;
+	overflow: hidden;
+	/* background: #fff; */
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding: 10px 0;
+	position: relative;
+}
+
+.marquee-content {
+	display: flex;
+	animation: marquee 5s linear infinite;
+}
+
+.marquee-content span {
+	display: inline-block;
+	/* font-size: 20px; */
+	font-weight: bolder;
+	padding-right: 30px;
+	/* Adjust for spacing between repeated texts */
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
 }
 </style>

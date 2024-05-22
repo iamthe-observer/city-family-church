@@ -11,10 +11,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#A0C49D',
-        secondary: '#C4D7B2',
-        tertiary: '#E1ECC8',
-        base: '#F7FFaa',
+        primary: '#B3C8CF',
+        secondary: '#BED7DC',
+        tertiary: '#49108B',
+        base: '#E5DDC5',
+        base00: '#F1EEDC',
       },
       fontFamily: {
         PlusSans: ['Plus Jakarta Sans', 'sans-serif'],

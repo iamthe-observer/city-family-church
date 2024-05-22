@@ -33,9 +33,10 @@ const props = defineProps(['text'])
 
 .marquee-content span {
 	display: inline-block;
-	font-size: 70px;
+	font-size: 150px;
 	font-weight: bolder;
 	padding-right: 50px;
+	font-family: Barlow Condensed, sans-serif;
 	/* Adjust for spacing between repeated texts */
 }
 
