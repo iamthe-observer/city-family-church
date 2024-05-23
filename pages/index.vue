@@ -10,7 +10,7 @@
 					<InfoTab />
 				</AnimHero>
 				<!-- bg-img -->
-				<img src="../assets/image.png" alt="" class="object-cover w-full h-full scale-125 home-img">
+				<img src="../assets/praying2.jpg" alt="" class="object-cover w-full h-full scale-125 home-img">
 			</div>
 		</section>
 
@@ -84,7 +84,16 @@
 
 
 		<!-- message 2 -->
-		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-base b-[100px]">
+		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-base b-[100px] relative">
+			<div
+				class="absolute top-2 left-1/2 -translate-x-1/2 uppercase text-xs font-bold tracking-wider flex items-center">
+				Keep
+				Scrolling
+				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 animate-bounce" viewBox="0 0 24 24">
+					<path fill="currentColor"
+						d="M11.997 20.92q-.159 0-.295-.057t-.267-.186l-5.427-5.421q-.14-.14-.15-.344t.13-.35q.147-.166.357-.156t.357.156l4.798 4.784V12.73q0-.213.144-.356q.144-.144.357-.144t.356.144t.143.356v6.636l4.823-4.803q.136-.14.339-.14t.353.145q.137.134.137.341t-.14.348l-5.447 5.42q-.13.132-.27.187q-.139.056-.298.056M12 10.23q-.212 0-.356-.144T11.5 9.73v-2q0-.213.144-.356q.144-.144.357-.144t.356.144t.143.356v2.02q0 .203-.144.342q-.144.138-.357.138m0-5q-.212 0-.356-.144T11.5 4.73v-1q0-.213.144-.356q.144-.144.357-.144t.356.144t.143.356v1.02q0 .203-.144.342q-.144.138-.357.138" />
+				</svg>
+			</div>
 
 			<div class="animate-container overflow-hidden relative w-full h-screen">
 				<div
@@ -124,25 +133,32 @@
 		<!-- message 3 -->
 		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
 			<div class="w-full bg-base">
-				<h1 class="text-6xl font-black text-black bg-primary pt-16 pl-20 rounded-t-[70px]">
+				<h1 class="text-6xl font-black text-black bg-secondary pt-16 pl-20 rounded-t-[70px]">
 					<div class="head-text font-PlusSans">
 						Lorem Text About Church
 					</div>
 				</h1>
 			</div>
-			<section class="w-full min-h-[600px] bg-primary rounded-b-[70px] px-10 relative">
+			<section class="w-full min-h-[600px] bg-secondary rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
+
+						<div v-for="(item, i) in dataCards" :key="i"
+							class="item flex flex-col p-10 justify-between hover:bg-secondary">
+							<div class="flex flex-col gap-6 justify-between">
+								<div class="font-bold text-3xl font-PlusSans">{{ item.title }}</div>
+								<div class="font-medium">
+									{{ item.content }}
+								</div>
+							</div>
+							<div class="w-full flex justify-end">
+								<button
+									class="btn p-3 px-8 rounded-full bg-base00 text-black font-bold uppercase font-PlusSans hover:text-white hover:bg-black">{{
+										item.action }}</button>
+							</div>
+
+						</div>
 					</div>
 				</div>
 			</section>
@@ -154,9 +170,8 @@
 		</section>
 
 		<!-- space for footer to show -->
-		<section class="footer-container w-full h-[85vh]">
+		<section class="footer-container w-full h-[85vh] pointer-events-none">
 		</section>
-
 
 
 		<Foooter></Foooter>
@@ -169,6 +184,43 @@ const img2 = ref()
 let pressed = ref(false)
 let startX = ref()
 let x = ref()
+const dataCards = ref([
+	{
+		title: 'Services',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		action: 'Learn More'
+	},
+	{
+		title: 'Services',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		action: 'Learn More'
+	},
+	{
+		title: 'Services',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		action: 'Learn More'
+	},
+	{
+		title: 'Services',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		action: 'Learn More'
+	},
+	{
+		title: 'Services',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		action: 'Learn More'
+	},
+	{
+		title: 'Services',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		action: 'Learn More'
+	},
+	{
+		title: 'Services',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		action: 'Learn More'
+	},
+])
 
 const { $gsap: gsap } = useNuxtApp()
 
@@ -282,8 +334,8 @@ onMounted(() => {
 	const tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: '.section3',
-			start: 'top 25%',
-			end: '50 25%',
+			start: 'top 50%',
+			end: '70 30%',
 			scrub: 1,
 		}
 	})
@@ -375,6 +427,10 @@ onMounted(() => {
 	width: 300px;
 	border-radius: 20px;
 	background-color: white;
+}
+
+.item:hover {
+	background-color: #49108B;
 }
 
 .marquee {

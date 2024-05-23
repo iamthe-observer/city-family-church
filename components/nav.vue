@@ -5,7 +5,7 @@
 		</div>
 		<!-- action -->
 		<div @click="toggleNav"
-			class="fixed top-16 right-8 w-40 h-14 z-[100] flex justify-evenly items-center font-PlusSans">
+			class="cursor-pointer fixed top-16 right-8 w-40 h-14 z-[100] flex justify-evenly items-center font-PlusSans">
 			<span class="font-bold text-lg mix-blend-overlay">{{ opened ? 'Close' : 'Menu' }}</span>
 			<svg v-if="!opened" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 				<path fill="currentColor" d="M21 18H3v-2h18v2Zm0-5H3v-2h18v2Zm0-5H3V6h18v2Z" />
@@ -70,7 +70,7 @@
 						</svg>
 						{{ route.name }}
 						<span
-							class="-translate-x-4 group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out">.</span>
+							:class="[$route.path === route.path ? 'opacity-0' : '-translate-x-4 group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out']">.</span>
 					</NuxtLink>
 
 					<!-- <span class="">Connect</span>
