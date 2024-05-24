@@ -136,8 +136,13 @@
 		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
 			<div class="w-full bg-base">
 				<h1 class="text-6xl font-black text-black bg-secondary pt-16 pl-20 rounded-t-[70px]">
-					<div class="head-text font-PlusSans">
-						Lorem Text About Church
+					<div class="head-text font-black font-PlusSans">
+						Our Beliefs
+						<span class="block text-xl font-normal font-SpaceGrotesk pt-4">Here at City Family Church,
+							we hold these
+							beliefs to be
+							central to our faith
+							and guiding principles.</span>
 					</div>
 				</h1>
 			</div>
@@ -146,20 +151,14 @@
 				<div class="Ccontainer">
 					<div class="items-container">
 
-						<div v-for="(item, i) in dataCards" :key="i"
+						<div v-for="(item, i) in beliefs" :key="i"
 							class="item flex flex-col p-10 justify-between hover:bg-secondary">
 							<div class="flex flex-col gap-6 justify-between">
-								<div class="font-bold text-3xl font-PlusSans">{{ item.title }}</div>
+								<div class="font-bold text-3xl font-PlusSans">{{ item.head }}</div>
 								<div class="font-medium">
-									{{ item.content }}
+									{{ item.body }}
 								</div>
 							</div>
-							<div class="w-full flex justify-end">
-								<button
-									class="btn p-3 px-8 rounded-full bg-base00 text-black font-bold uppercase font-PlusSans hover:text-white hover:bg-black">{{
-										item.action }}</button>
-							</div>
-
 						</div>
 					</div>
 				</div>
@@ -186,6 +185,41 @@ const img2 = ref()
 let pressed = ref(false)
 let startX = ref()
 let x = ref()
+let beliefs = [
+	{
+		head: "Bible's Truth",
+		body: 'The Bible is the inspired word of God and is the ultimate authority for all matters of faith and practice.',
+	},
+	{
+		head: 'Jesus',
+		body: 'Jesus Christ is the Son of God and the only way to salvation.',
+	},
+	{
+		head: 'Faith',
+		body: "Salvation is a free gift of God's grace, received through faith in Jesus Christ.",
+	},
+	{
+		head: 'Holy Spirit',
+		body: 'The Holy Spirit empowers believers to live a godly life and is present to guide and direct them.',
+	},
+	{
+		head: 'Baptism',
+		body: "Baptism by immersion is an important step of obedience for believers, signifying their identification with Christ's death, burial, and resurrection.",
+	},
+	{
+		head: 'Communion',
+		body: "Communion, or the Lord's Supper, is a symbolic remembrance of Christ's sacrifice for believers.",
+	},
+	{
+		head: 'Church as a Body',
+		body: 'The church is the body of Christ and is called to carry out His mission on earth.',
+	},
+	{
+		head: 'His Return',
+		body: 'The return of Jesus Christ is certain and will be visible, personal, and triumphant.',
+	},
+]
+
 const dataCards = ref([
 	{
 		title: 'Services',
@@ -425,10 +459,10 @@ onMounted(() => {
 }
 
 .item {
-	height: 400px;
+	height: fit-content;
 	width: 300px;
 	border-radius: 20px;
-	background-color: white;
+	background-color: #f0f0f0;
 }
 
 .item:hover {
