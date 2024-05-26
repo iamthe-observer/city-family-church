@@ -1,6 +1,6 @@
 <template>
 	<div class="fixed top-0 left-0 w-full h-full flex items-end z-[-1]">
-		<div class="w-full h-[85vh] flex gap-2 pt-40 bg-base px-32">
+		<div class="w-full h-[85vh] flex gap-2 py-20 bg-base px-10">
 
 			<!-- socials and links -->
 			<div class="cont flex-1 flex gap-10 justify-start">
@@ -61,7 +61,7 @@
 
 			<!-- news letters -->
 			<div class="cont w-[500px]">
-				<div class="w-full h-full flex flex-col items-center px-20">
+				<div class="w-full h-full flex flex-col items-center px-10">
 
 					<h3 class="font-bold text-2xl w-full pb-1">Subscribe To Our Newsletter</h3>
 					<div class="w-full pb-10 font-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit.

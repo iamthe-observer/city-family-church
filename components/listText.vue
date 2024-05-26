@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full relative flex justify-start items-center">
-		<span class="font-medium cursor-pointer peer">
+		<span class="font-medium cursor-pointer peer whitespace-nowrap">
 			<slot />
 		</span>
 		<span

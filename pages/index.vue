@@ -101,20 +101,20 @@
 				</div>
 
 				<div
-					class="absolute font-black text-[10rem] top-32 left-[300px] flex items-center font-BarlowCondensed italic">
+					class="absolute font-black text-[8vw] top-32 left-[300px] flex items-center font-BarlowCondensed italic">
 					<span class="born opacity-0" v-for="(letter, i) in ['BORN'].map(str => str.split('')).flat()"
 						:key="i">
 						{{ letter }}
 					</span>
 				</div>
 				<div
-					class="absolute font-black text-[10rem] top-[30%] right-[400px] flex items-center font-BarlowCondensed italic">
+					class="absolute font-black text-[8vw] top-[30%] right-[400px] flex items-center font-BarlowCondensed italic">
 					<span class="in opacity-0" v-for="(letter, i) in ['IN'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
 				<div
-					class="absolute font-black text-[10rem] bottom-32 left-1/2 -translate-x-1/2 flex items-center font-BarlowCondensed italic">
+					class="absolute font-black text-[8vw] bottom-32 left-1/2 -translate-x-1/2 flex items-center font-BarlowCondensed italic">
 					<span class="christ opacity-0" v-for="(letter, i) in ['CHRIST'].map(str => str.split('')).flat()"
 						:key="i">
 						{{ letter }}

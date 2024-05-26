@@ -18,7 +18,7 @@
 
 		<!-- nav content -->
 		<div
-			class="fixed top-0 left-0 w-full h-full z-50 flex-col nav-content hidden opacity-0  font-PlusSans font-bold">
+			class="fixed top-0 left-0 w-full h-full z-50 flex-col nav-content hidden opacity-0 font-PlusSans font-bold">
 			<!-- top -->
 			<div class="flex-1 flex">
 				<div class="relative flex-1 flex flex-col justify-between p-10">
@@ -45,27 +45,27 @@
 					</div>
 					<!-- socials -->
 					<div class="flex flex-col gap-5 text-xl">
-						<span class="">Facebook</span>
-						<span class="">Youtube</span>
-						<span class="">Twitter</span>
-						<span class="">Instagram</span>
+						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Facebook</span>
+						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Youtube</span>
+						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Twitter</span>
+						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Instagram</span>
 					</div>
 				</div>
 
 				<!-- lineV -->
 				<div class="w-[4px] h-0 bg-black line-v"></div>
 
-				<div class="w-[60%] h-full flex flex-col p-20 font-bold text-[5.4rem] font-SpaceGrotesk">
+				<div class="w-[60%] h-full flex flex-col p-20 font-bold text-[3.7vw] font-SpaceGrotesk">
 
 					<NuxtLink :to="route.path" v-for="(route, i) in routes" :key="i"
 						class="flex items-center gap-5 group">
-						<svg v-if="$route.path === route.path" class="w-16 h-16 drop-shadow-xl"
+						<svg v-if="$route.path === route.path" class="w-10 h-10 drop-shadow-xl"
 							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path fill="#34222E" d="M14 2h-4v6H4v4h6v10h4V12h6V8h-6z" />
 						</svg>
 						<svg v-else
-							class="w-0 h-16 group-hover:w-16 group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out"
-							xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+							class="w-0 h-10 group-hover:w-10 group-hover:opacity-100 opacity-0 transition-all duration-200 ease-in-out"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path fill="currentColor" d="M9 2h6v5h5v6h-5v9H9v-9H4V7h5zm2 2v5H6v2h5v9h2v-9h5V9h-5V4z" />
 						</svg>
 						{{ route.name }}
@@ -82,7 +82,49 @@
 			<!-- lineH -->
 			<div class="h-[4px] w-0 bg-black line-h"></div>
 			<!-- bottom -->
-			<div class="h-24 w-full"></div>
+			<div class="h-24 w-full grid place-items-center">
+
+				<section class="font-SpaceGrotesk w-full h-20 fixed p-1 px-5 z-50">
+					<div
+						class="p-2 w-fit mx-auto h-full rounded-3xl backdrop-blur-md bg-black/0 flex items-center justify-between gap-6 text-sm">
+						<div class="min-w-[300px] w-fit max-w-[700px] h-full flex items-center">
+							<span class="px-3 border-r border-black font-bold">SUNDAY SERVICES</span>
+							<span class="px-3 border-x border-black font-bold">9 AM</span>
+							<span class="px-3 border-x border-black font-bold">11 AM</span>
+							<span class="px-3 border-x border-black font-bold">4 PM</span>
+							<span class="px-3 border-l border-black font-bold">WATCH ONLINE</span>
+						</div>
+						<div class="min-w-[300px] w-full max-w-[700px] h-full flex items-center">
+							<div class="marquee">
+								<div class="marquee-content">
+									<span>JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
+										SERVICE
+										HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
+										WEEK
+										SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN
+										MID
+										WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! |
+										JOIN
+										MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
+										HERE! |
+										JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
+										SERVICE HERE!
+										| JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
+										SERVICE
+										HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
+										WEEK
+										SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN
+										MID
+										WEEK SERVICE HERE!</span>
+								</div>
+							</div>
+						</div>
+						<div class="bg-black rounded-full h-full aspect-square"></div>
+					</div>
+
+				</section>
+
+			</div>
 
 		</div>
 	</Teleport>
@@ -91,6 +133,39 @@
 <style scoped>
 .nav {
 	border-radius: 50px;
+}
+
+.marquee {
+	width: 100%;
+	overflow: hidden;
+	/* background: #fff; */
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding: 10px 0;
+	position: relative;
+}
+
+.marquee-content {
+	display: flex;
+	animation: marquee 5s linear infinite;
+}
+
+.marquee-content span {
+	display: inline-block;
+	/* font-size: 20px; */
+	font-weight: bolder;
+	padding-right: 30px;
+	/* Adjust for spacing between repeated texts */
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
 }
 </style>
 
