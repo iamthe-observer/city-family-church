@@ -1,66 +1,44 @@
 <template>
-	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-SpaceGrotesk"
+	<Loading></Loading>
+
+	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-PlusSans"
 		id="church">
 
 		<!-- welcome hero -->
-		<section class="welcome-hero w-full h-[calc(100vh-80px)] flex flex-col bg-white z-10 section0">
+		<section class="welcome-hero w-full h-[calc(110vh)] flex flex-col bg-white z-10 section0">
 			<div class="w-full h-full overflow-hidden rounded-b-[70px] relative">
 				<!-- info tab -->
 				<AnimHero>
 					<span
-						class="uppercase text-base00 w-full h-full grid place-items-center font-black font-BarlowCondensed text-[10rem]">GET
-						IN TOUCH</span>
+						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] font-black uppercase font-Cinzel">
+						Connect
+					</span>
+
 				</AnimHero>
 				<!-- bg-img -->
-				<img src="../assets/bg.jpg" alt="" class="object-cover w-full h-full scale-125 home-img">
+				<img src="../assets/praying2.jpg" alt="" class="object-cover w-full h-full scale-125 home-img">
 			</div>
 		</section>
 
 		<!-- logo -->
-		<div class="fixed w-32 aspect-square rounded-[40px] bg-white z-50 top-8 left-8 shadow-xl"></div>
+		<Logo />
 
 		<!-- nav menu -->
 		<Nav />
 
 		<!-- church summary -->
-		<section class="w-full h-20 fixed p-1 px-5 z-50 bottom-0 summary">
-
-			<div
-				class="p-2 w-[95%] mx-auto h-full rounded-3xl backdrop-blur-md bg-black/5 flex items-center justify-between gap-2 text-sm">
-				<div class="min-w-[300px] w-fit max-w-[700px] h-full flex items-center">
-					<span class="px-3 border-r border-black font-bold">SUNDAY SERVICES</span>
-					<span class="px-3 border-x border-black font-bold">9 AM</span>
-					<span class="px-3 border-x border-black font-bold">11 AM</span>
-					<span class="px-3 border-x border-black font-bold">4 PM</span>
-					<span class="px-3 border-l border-black font-bold">WATCH ONLINE</span>
-				</div>
-				<div class="min-w-[300px] w-full max-w-[700px] h-full flex items-center">
-					<div class="marquee">
-						<div class="marquee-content">
-							<span>JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
-								HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
-								SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
-								WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN
-								MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! |
-								JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE!
-								| JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
-								HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
-								SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
-								WEEK SERVICE HERE!</span>
-						</div>
-					</div>
-				</div>
-				<div class="bg-black rounded-full h-full aspect-square"></div>
-			</div>
-
-		</section>
+		<SummaryBar />
 
 		<!-- message -->
-		<div class="w-full h-full bg-base">
+		<div class="w-full h-full bg-clrr1">
 			<section
 				class="w-full min-h-[90vh] bg-white rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1 justify-center">
 				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
-					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-PlusSans">The Head <br />Topic</h3>
+					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
+						<BubbleText text="The Head" default_clr="000" />
+						<br />
+						<BubbleText text="Topic" default_clr="000" />
+					</h3>
 					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae
 						obcaecati
 						sit
@@ -85,56 +63,10 @@
 		</div>
 
 
-		<!-- message 2 -->
-		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-base b-[100px] relative">
-			<div
-				class="absolute top-2 left-1/2 -translate-x-1/2 uppercase text-xs font-bold tracking-wider flex items-center">
-				Keep
-				Scrolling
-				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 animate-bounce" viewBox="0 0 24 24">
-					<path fill="currentColor"
-						d="M11.997 20.92q-.159 0-.295-.057t-.267-.186l-5.427-5.421q-.14-.14-.15-.344t.13-.35q.147-.166.357-.156t.357.156l4.798 4.784V12.73q0-.213.144-.356q.144-.144.357-.144t.356.144t.143.356v6.636l4.823-4.803q.136-.14.339-.14t.353.145q.137.134.137.341t-.14.348l-5.447 5.42q-.13.132-.27.187q-.139.056-.298.056M12 10.23q-.212 0-.356-.144T11.5 9.73v-2q0-.213.144-.356q.144-.144.357-.144t.356.144t.143.356v2.02q0 .203-.144.342q-.144.138-.357.138m0-5q-.212 0-.356-.144T11.5 4.73v-1q0-.213.144-.356q.144-.144.357-.144t.356.144t.143.356v1.02q0 .203-.144.342q-.144.138-.357.138" />
-				</svg>
-			</div>
-
-			<div class="animate-container overflow-hidden relative w-full h-screen">
-				<div
-					class="__circle hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0 aspect-square rounded-full border-2 border-black">
-				</div>
-
-				<div
-					class="absolute font-black text-[10rem] top-32 left-[300px] flex items-center font-BarlowCondensed italic">
-					<span class="born opacity-0" v-for="(letter, i) in ['BORN'].map(str => str.split('')).flat()"
-						:key="i">
-						{{ letter }}
-					</span>
-				</div>
-				<div
-					class="absolute font-black text-[10rem] top-[30%] right-[400px] flex items-center font-BarlowCondensed italic">
-					<span class="in opacity-0" v-for="(letter, i) in ['IN'].map(str => str.split('')).flat()" :key="i">
-						{{ letter }}
-					</span>
-				</div>
-				<div
-					class="absolute font-black text-[10rem] bottom-32 left-1/2 -translate-x-1/2 flex items-center font-BarlowCondensed italic">
-					<span class="christ opacity-0" v-for="(letter, i) in ['CHRIST'].map(str => str.split('')).flat()"
-						:key="i">
-						{{ letter }}
-					</span>
-				</div>
-
-				<div
-					class="flex flex-col justify-center items-center font-bold text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mission opacity-0 font-PlusSans">
-					<span class="">Our Mission Is For YOU To Be</span>
-					<span class="">Be In Christ</span>
-				</div>
-			</div>
-
-		</section>
 
 		<!-- message 3 -->
 		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
-			<div class="w-full bg-base">
+			<div class="w-full bg-clrr1">
 				<h1 class="text-6xl font-black text-black bg-secondary pt-16 pl-20 rounded-t-[70px]">
 					<div class="head-text font-PlusSans">
 						Lorem Text About Church
@@ -156,7 +88,7 @@
 							</div>
 							<div class="w-full flex justify-end">
 								<button
-									class="btn p-3 px-8 rounded-full bg-base00 text-black font-bold uppercase font-PlusSans hover:text-white hover:bg-black">{{
+									class="btn p-3 px-8 rounded-full bg-clrr2 text-black font-bold uppercase font-PlusSans hover:text-white hover:bg-black">{{
 										item.action }}</button>
 							</div>
 
@@ -181,6 +113,15 @@
 </template>
 
 <script setup lang="ts">
+import appStore from '../stores/app';
+const { loading, loading_anim_done } = storeToRefs(appStore())
+
+appStore().$patch((state) => {
+	return state.loading = true
+})
+
+
+
 const img1 = ref()
 const img2 = ref()
 let pressed = ref(false)
@@ -226,64 +167,10 @@ const dataCards = ref([
 
 const { $gsap: gsap } = useNuxtApp()
 
-function homeAnimation() {
-	const section: number = document.querySelector('.section2')!.getBoundingClientRect().height
-	const born = gsap.utils.toArray('.born')
-	const iN = gsap.utils.toArray('.in')
-	const christ = gsap.utils.toArray('.christ')
-
-	const tl = gsap.timeline({
-		scrollTrigger: {
-			trigger: '.section2',
-			start: 'top top',
-			end: `+=${section * 2}`,
-			scrub: 1,
-			pin: true
-		}
-	})
-
-	tl.to('.animate-container', {
-		y: 0,
-		ease: 'power4.inOut',
-		duration: 2
-	})
-		.to('.mission', {
-			opacity: 1
-		}, "<+=.5")
-		.to('.__circle', {
-			width: '200%',
-			display: 'block',
-			duration: 3,
-			ease: 'power4.inOut'
-		}, '<')
-		.fromTo(born, {
-			y: 100,
-		}, {
-			y: 0,
-			stagger: 0.1,
-			opacity: 1,
-			ease: 'power4.inOut'
-		})
-		.fromTo(iN, {
-			y: 100,
-		}, {
-			y: 0,
-			stagger: 0.1,
-			opacity: 1,
-			ease: 'power4.inOut'
-		})
-		.fromTo(christ, {
-			y: 100,
-		}, {
-			y: 0,
-			stagger: 0.1,
-			opacity: 1,
-			ease: 'power4.inOut'
-		})
-}
-
 
 onMounted(() => {
+	document.body.style.overflow = 'hidden';
+
 	gsap.to('.home-img', {
 		scrollTrigger: {
 			trigger: '.section0',
@@ -294,30 +181,38 @@ onMounted(() => {
 		y: -20
 	})
 
-	const homeTl = gsap.timeline()
-	document.body.style.overflow = 'hidden';
+	watchEffect(() => {
+		if (loading_anim_done.value) {
+			loading_anim_done.value = false
+			const homeTl = gsap.timeline()
 
-	homeTl
-		.from('.welcome-hero', {
-			delay: 0.5,
-			height: '110vh',
-			duration: 2,
-			ease: 'power4.inOut',
-		})
-		.from('.info-tab', {
-			// delay: 0.5,
-			opacity: 0,
-			duration: .4,
-		})
-		.from('.summary', {
-			y: 100,
-			ease: 'power4.inOut',
-			onComplete: () => {
-				document.body.style.overflow = 'auto';
-			}
-		})
+			homeTl
+				.to('.welcome-hero', {
+					delay: 0,
+					height: () => `calc(100vh - 80px)`, // this uses a function to calculate the height
+					duration: 1,
+					ease: 'power4.inOut',
+				})
+				.to('.info-tab', {
+					// delay: 0.5,
+					opacity: 1,
+					duration: .4,
+				})
+				.to('.nav-item', {
+					stagger: 0.1,
+					opacity: 1,
+				}, '<')
+				.to('.summary', {
+					y: 0,
+					ease: 'power4.inOut',
+					onComplete: () => {
+						document.body.style.overflow = 'auto';
+					}
+				})
 
-	homeAnimation()
+		}
+	})
+
 	const imageMoveTl = gsap.timeline({
 		scrollTrigger: {
 			trigger: '.section1',

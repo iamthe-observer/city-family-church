@@ -1,5 +1,5 @@
 <template>
-	<div class="max-w-[1100px] w-full h-52 absolute bottom-10 left-1/2 -translate-x-1/2 z-10 info-tab">
+	<div class="max-w-[1100px] w-full h-52 absolute bottom-10 left-1/2 -translate-x-1/2 z-10 info-tab opacity-0">
 
 		<slot />
 

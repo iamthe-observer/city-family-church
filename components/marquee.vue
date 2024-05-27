@@ -1,52 +1,69 @@
 <script setup lang="ts">
-const props = defineProps(['text'])
+const props = defineProps(['text', 'classer'])
+const { $gsap: gsap } = useNuxtApp()
+
+let currentScroll = ref(0);
+let isScrollingDown = ref(true);
+
+onMounted(() => {
+
+	let tween = gsap.to(".marquee__part", { xPercent: -100, repeat: -1, duration: 10, ease: "linear" }).totalProgress(0.5);
+
+	gsap.set(".marquee__inner", { xPercent: -50 });
+
+	window.addEventListener("scroll", function () {
+
+		if (window.pageYOffset > currentScroll.value) {
+			isScrollingDown.value = true;
+		} else {
+			isScrollingDown.value = false;
+		}
+
+		gsap.to(tween, {
+			timeScale: isScrollingDown.value ? 1 : -1
+		});
+
+		currentScroll.value = window.pageYOffset
+	});
+
+})
 </script>
 
 <template>
-	<div class="marquee">
-		<div class="marquee-content">
-			<span>OUTWARD FOCUSED - LIFE GIVING - SPIRIT OF EXCELLENCE - PEOPLE EMPOWERING</span>
-			<span>OUTWARD FOCUSED - LIFE GIVING - SPIRIT OF EXCELLENCE - PEOPLE EMPOWERING</span>
-			<span>OUTWARD FOCUSED - LIFE GIVING - SPIRIT OF EXCELLENCE - PEOPLE EMPOWERING</span>
-			<span>OUTWARD FOCUSED - LIFE GIVING - SPIRIT OF EXCELLENCE - PEOPLE EMPOWERING</span>
-			<span>OUTWARD FOCUSED - LIFE GIVING - SPIRIT OF EXCELLENCE - PEOPLE EMPOWERING</span>
-			<span>OUTWARD FOCUSED - LIFE GIVING - SPIRIT OF EXCELLENCE - PEOPLE EMPOWERING</span>
+	<section :class="['marquee w-full']">
+		<div class="marquee__inner" aria-hidden="true" ref="inner">
+			<div v-for="i in 10" :class="['marquee__part', classer]">
+				JOHN 3:16
+			</div>
+
 		</div>
-	</div>
+	</section>
 </template>
 
 <style scoped>
+.marquee__part {
+	flex-shrink: 0;
+	padding: 0 50px;
+	font-smooth: always;
+}
+
 .marquee {
-	width: 100%;
-	overflow: hidden;
-	background: #fff;
-	white-space: nowrap;
-	box-sizing: border-box;
-	padding: 10px 0;
+	/* background: ; */
+	color: black;
+	text-transform: uppercase;
+	font-weight: 600;
+	/* font-size: 10vw; */
+	padding: 32px 0;
+
 	position: relative;
+	overflow: hidden;
 }
 
-.marquee-content {
+.marquee__inner {
+	-webkit-font-smoothing: antialiased;
+	width: fit-content;
 	display: flex;
-	animation: marquee 5s linear infinite;
-}
-
-.marquee-content span {
-	display: inline-block;
-	font-size: 150px;
-	font-weight: bolder;
-	padding-right: 50px;
-	font-family: Barlow Condensed, sans-serif;
-	/* Adjust for spacing between repeated texts */
-}
-
-@keyframes marquee {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(-50%);
-	}
+	flex: auto;
+	flex-direction: row;
 }
 </style>

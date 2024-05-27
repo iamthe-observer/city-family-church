@@ -1,12 +1,14 @@
 <template>
 	<div class="fixed top-0 left-0 w-full h-full flex items-end z-[-1]">
-		<div class="w-full h-[85vh] flex gap-2 py-20 bg-base px-10">
+		<div class="w-full h-[85vh] flex gap-2 py-20 bg-clrr1 px-10">
 
 			<!-- socials and links -->
 			<div class="cont flex-1 flex gap-10 justify-start">
 				<!-- logo -->
 				<div class="cont w-[200px] px-8">
-					<div class="w-full aspect-square rounded-full bg-black"></div>
+					<div class="w-full aspect-square rounded-full">
+						<img src="../assets/logo.png" alt="" class="w-full aspect-square object-cover">
+					</div>
 				</div>
 				<div class="flex flex-col gap-3 max-w-[300px] font-medium">
 					<h3 class="font-bold text-2xl font-PlusSans">Contact Us</h3>

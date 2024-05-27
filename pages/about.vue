@@ -1,80 +1,54 @@
 <template>
-	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-SpaceGrotesk"
+	<Loading></Loading>
+
+	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-PlusSans"
 		id="church">
 
 		<!-- welcome hero -->
-		<section class="welcome-hero w-full h-[calc(100vh-80px)] flex flex-col bg-white z-10 section0">
+		<section class="welcome-hero w-full h-[calc(110vh)] flex flex-col bg-white z-10 section0">
 			<div class="w-full h-full overflow-hidden rounded-b-[70px] relative">
 				<!-- info tab -->
 				<AnimHero>
 					<span
-						class="uppercase text-base00 w-full h-full grid place-items-center font-black font-BarlowCondensed text-[10rem]">OUR
-						HISTORY</span>
+						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] font-black uppercase font-Cinzel ">
+						About
+						Us</span>
 				</AnimHero>
 				<!-- bg-img -->
-				<img src="../assets/image.png" alt="" class="object-cover w-full h-full scale-125 home-img">
+				<img src="../assets/praying.png" alt="" class="object-cover w-full h-full scale-125 home-img">
 			</div>
 		</section>
 
 		<!-- logo -->
-		<div class="fixed w-32 aspect-square rounded-[40px] bg-white z-50 top-8 left-8 shadow-xl"></div>
+		<Logo />
 
 		<!-- nav menu -->
 		<Nav />
 
 		<!-- church summary -->
-		<section class="w-full h-20 fixed p-1 px-5 z-50 bottom-0 summary">
-
-			<div
-				class="p-2 w-[95%] mx-auto h-full rounded-3xl backdrop-blur-md bg-black/5 flex items-center justify-between gap-2 text-sm">
-				<div class="min-w-[300px] w-fit max-w-[700px] h-full flex items-center">
-					<span class="px-3 border-r border-black font-bold">SUNDAY SERVICES</span>
-					<span class="px-3 border-x border-black font-bold">9 AM</span>
-					<span class="px-3 border-x border-black font-bold">11 AM</span>
-					<span class="px-3 border-x border-black font-bold">4 PM</span>
-					<span class="px-3 border-l border-black font-bold">WATCH ONLINE</span>
-				</div>
-				<div class="min-w-[300px] w-full max-w-[700px] h-full flex items-center">
-					<div class="marquee">
-						<div class="marquee-content">
-							<span>JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
-								HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
-								SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
-								WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN
-								MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! |
-								JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE!
-								| JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
-								HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
-								SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
-								WEEK SERVICE HERE!</span>
-						</div>
-					</div>
-				</div>
-				<div class="bg-black rounded-full h-full aspect-square"></div>
-			</div>
-
-		</section>
+		<SummaryBar />
 
 		<!-- message -->
-		<div class="w-full h-full bg-base">
+		<div class="w-full h-full bg-clrr1">
 			<section
 				class="w-full min-h-[90vh] bg-white rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1 justify-center">
 				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
-					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-PlusSans">The Head <br />Topic</h3>
-					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae
-						obcaecati
-						sit
-						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
+					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
+						<BubbleText default_clr="000" text="OUR" /><br />
+						<BubbleText default_clr="000" text="MISSION" />
+					</h3>
+					<span class="w-4/5 text-2xl">Our purpose is to help people who are distant from God to discover new
+						life through Jesus Christ.</span>
 				</div>
 
-				<div class="flex-1 relative 1/2">
+				<div class="flex-1 relative">
 					<!-- img1 -->
-					<div ref="img1" class="absolute top-0 right-1/2 translate-x-[90%] w-80 aspect-square img1">
+					<div ref="img1" class="absolute top-0 right-1/2 translate-x-[90%] w-60 aspect-square img1">
 						<img src="../assets/talk.png" alt=""
 							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
-					<div ref="img2" class="absolute bottom-0 left-1/2 translate-x-[-90%] w-80 aspect-square img2">
+					<div ref="img2" class="absolute bottom-0 left-1/2 translate-x-[-90%] w-[400px] aspect-square img2">
 						<img src="../assets/praying.png" alt=""
 							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
@@ -86,7 +60,7 @@
 
 
 		<!-- message 2 -->
-		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-base b-[100px] relative">
+		<section class="w-full h-[100vh] rounded--[70px] section2 gap-14 bg-clrr1 b-[100px] relative">
 			<div
 				class="absolute top-2 left-1/2 -translate-x-1/2 uppercase text-xs font-bold tracking-wider flex items-center">
 				Keep
@@ -103,30 +77,31 @@
 				</div>
 
 				<div
-					class="absolute font-black text-[10rem] top-32 left-[300px] flex items-center font-BarlowCondensed italic">
-					<span class="born opacity-0" v-for="(letter, i) in ['BORN'].map(str => str.split('')).flat()"
-						:key="i">
+					class="absolute font-black text-[8vw] top-32 left-[300px] flex items-center font-BarlowCondensed italic">
+					<span class="born opacity-0 uppercase"
+						v-for="(letter, i) in ['values1'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
 				<div
-					class="absolute font-black text-[10rem] top-[30%] right-[400px] flex items-center font-BarlowCondensed italic">
-					<span class="in opacity-0" v-for="(letter, i) in ['IN'].map(str => str.split('')).flat()" :key="i">
+					class="absolute font-black text-[8vw] top-[30%] right-[400px] flex items-center font-BarlowCondensed italic">
+					<span class="in opacity-0 uppercase"
+						v-for="(letter, i) in ['values2'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
 				<div
-					class="absolute font-black text-[10rem] bottom-32 left-1/2 -translate-x-1/2 flex items-center font-BarlowCondensed italic">
-					<span class="christ opacity-0" v-for="(letter, i) in ['CHRIST'].map(str => str.split('')).flat()"
-						:key="i">
+					class="absolute font-black text-[8vw] bottom-32 left-1/2 -translate-x-1/2 flex items-center font-BarlowCondensed italic">
+					<span class="christ opacity-0 uppercase"
+						v-for="(letter, i) in ['value3'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
 
 				<div
 					class="flex flex-col justify-center items-center font-bold text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mission opacity-0 font-PlusSans">
-					<span class="">Our Mission Is For YOU To Be</span>
-					<span class="">Be In Christ</span>
+					<span class="">Our Values Lorem ipsum dolor sit amet.</span>
+					<span class="">Lorem, ipsum dolor.</span>
 				</div>
 			</div>
 
@@ -134,15 +109,10 @@
 
 		<!-- message 3 -->
 		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
-			<div class="w-full bg-base">
+			<div class="w-full bg-clrr1">
 				<h1 class="text-6xl font-black text-black bg-secondary pt-16 pl-20 rounded-t-[70px]">
-					<div class="head-text font-black font-PlusSans">
-						Our Beliefs
-						<span class="block text-xl font-normal font-SpaceGrotesk pt-4">Here at City Family Church,
-							we hold these
-							beliefs to be
-							central to our faith
-							and guiding principles.</span>
+					<div class="head-text font-PlusSans">
+						<BubbleText text="Beliefs" default_clr="000" />
 					</div>
 				</h1>
 			</div>
@@ -151,21 +121,22 @@
 				<div class="Ccontainer">
 					<div class="items-container">
 
-						<div v-for="(item, i) in beliefs" :key="i"
-							class="item flex flex-col p-10 justify-between hover:bg-secondary">
+						<div v-for="(item, i) in dataCards" :key="i"
+							class="item flex flex-col p-10 justify-between hover:bg-secondary h-fit">
 							<div class="flex flex-col gap-6 justify-between">
-								<div class="font-bold text-3xl font-PlusSans">{{ item.head }}</div>
+								<div class="font-bold text-3xl font-PlusSans">{{ item.title }}</div>
 								<div class="font-medium">
-									{{ item.body }}
+									{{ item.content }}
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- end quote marquee -->
 			<section class="w-full h-[50vh] bg-white py-20 pb-60">
-				<Marquee text="Quote Marquee" />
+				<Marquee text="JOHN 3:16 -" />
 			</section>
 
 		</section>
@@ -180,80 +151,59 @@
 </template>
 
 <script setup lang="ts">
+import { useTitle } from '@vueuse/core';
+import appStore from '../stores/app';
+const { loading_anim_done } = storeToRefs(appStore())
+
+appStore().$patch((state) => {
+	return state.loading = true
+})
+
+onMounted(() => {
+	document.body.scrollTop = 0
+	useTitle('CF Church - About')
+})
+
+
 const img1 = ref()
 const img2 = ref()
 let pressed = ref(false)
 let startX = ref()
 let x = ref()
-let beliefs = [
-	{
-		head: "Bible's Truth",
-		body: 'The Bible is the inspired word of God and is the ultimate authority for all matters of faith and practice.',
-	},
-	{
-		head: 'Jesus',
-		body: 'Jesus Christ is the Son of God and the only way to salvation.',
-	},
-	{
-		head: 'Faith',
-		body: "Salvation is a free gift of God's grace, received through faith in Jesus Christ.",
-	},
-	{
-		head: 'Holy Spirit',
-		body: 'The Holy Spirit empowers believers to live a godly life and is present to guide and direct them.',
-	},
-	{
-		head: 'Baptism',
-		body: "Baptism by immersion is an important step of obedience for believers, signifying their identification with Christ's death, burial, and resurrection.",
-	},
-	{
-		head: 'Communion',
-		body: "Communion, or the Lord's Supper, is a symbolic remembrance of Christ's sacrifice for believers.",
-	},
-	{
-		head: 'Church as a Body',
-		body: 'The church is the body of Christ and is called to carry out His mission on earth.',
-	},
-	{
-		head: 'His Return',
-		body: 'The return of Jesus Christ is certain and will be visible, personal, and triumphant.',
-	},
-]
-
 const dataCards = ref([
 	{
-		title: 'Services',
+		title: 'Beliefs',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum ',
+		action: 'Learn More'
+	},
+	{
+		title: 'Beliefs',
 		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
 		action: 'Learn More'
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		title: 'Beliefs',
+		content: 'Lorem it, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
 		action: 'Learn More'
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		title: 'Beliefs',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repelliam nisi?',
 		action: 'Learn More'
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		title: 'Beliefs',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nisi?',
 		action: 'Learn More'
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		title: 'Beliefs',
+		content: 'Loi quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
 		action: 'Learn More'
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
-	},
-	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
+		title: 'Beliefs',
+		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora situr veniam nisi?',
 		action: 'Learn More'
 	},
 ])
@@ -318,6 +268,8 @@ function homeAnimation() {
 
 
 onMounted(() => {
+	document.body.style.overflow = 'hidden';
+
 	gsap.to('.home-img', {
 		scrollTrigger: {
 			trigger: '.section0',
@@ -328,28 +280,37 @@ onMounted(() => {
 		y: -20
 	})
 
-	const homeTl = gsap.timeline()
-	document.body.style.overflow = 'hidden';
+	watchEffect(() => {
+		if (loading_anim_done.value) {
+			loading_anim_done.value = false
+			const homeTl = gsap.timeline()
 
-	homeTl
-		.from('.welcome-hero', {
-			delay: 0.5,
-			height: '110vh',
-			duration: 2,
-			ease: 'power4.inOut',
-		})
-		.from('.info-tab', {
-			// delay: 0.5,
-			opacity: 0,
-			duration: .4,
-		})
-		.from('.summary', {
-			y: 100,
-			ease: 'power4.inOut',
-			onComplete: () => {
-				document.body.style.overflow = 'auto';
-			}
-		})
+			homeTl
+				.to('.welcome-hero', {
+					delay: 0,
+					height: () => `calc(100vh - 80px)`, // this uses a function to calculate the height
+					duration: 1,
+					ease: 'power4.inOut',
+				})
+				.to('.info-tab', {
+					// delay: 0.5,
+					opacity: 1,
+					duration: .4,
+				})
+				.to('.nav-item', {
+					stagger: 0.1,
+					opacity: 1,
+				}, '<')
+				.to('.summary', {
+					y: 0,
+					ease: 'power4.inOut',
+					onComplete: () => {
+						document.body.style.overflow = 'auto';
+					}
+				})
+
+		}
+	})
 
 	homeAnimation()
 	const imageMoveTl = gsap.timeline({
@@ -462,7 +423,7 @@ onMounted(() => {
 	height: fit-content;
 	width: 300px;
 	border-radius: 20px;
-	background-color: #f0f0f0;
+	background-color: white;
 }
 
 .item:hover {

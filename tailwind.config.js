@@ -11,18 +11,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#B3C8CF',
-        secondary: '#BED7DC',
-        tertiary: '#49108B',
-        base: '#E5DDC5',
-        base00: '#F1EEDC',
+        clr1: '#B3C8CF',
+        clr2: '#BED7DC',
+        clr3: '#49108B',
+        clrr1: '#E5DDC5',
+        clrr2: '#F1EEDC',
       },
       fontFamily: {
         PlusSans: ['Plus Jakarta Sans', 'sans-serif'],
         SpaceGrotesk: ['Space Grotesk', 'sans-serif'],
         BarlowCondensed: ['Barlow Condensed', 'sans-serif'],
+        Cinzel: ['Cinzel', 'serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }

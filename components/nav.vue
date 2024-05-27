@@ -1,11 +1,11 @@
 <template>
 	<Teleport to="body">
 		<!-- bg -->
-		<div class="fixed top-16 right-8 w-40 h-14 bg-white z-50 nav drop-shadow-xl">
+		<div class="fixed top-16 right-8 w-40 h-14 bg-white z-[95] nav drop-shadow-xl nav-item opacity-0">
 		</div>
 		<!-- action -->
 		<div @click="toggleNav"
-			class="cursor-pointer fixed top-16 right-8 w-40 h-14 z-[100] flex justify-evenly items-center font-PlusSans">
+			class="cursor-pointer fixed top-16 right-8 w-40 h-14 z-[99] flex justify-evenly items-center font-PlusSans nav-item opacity-0">
 			<span class="font-bold text-lg mix-blend-overlay">{{ opened ? 'Close' : 'Menu' }}</span>
 			<svg v-if="!opened" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 				<path fill="currentColor" d="M21 18H3v-2h18v2Zm0-5H3v-2h18v2Zm0-5H3V6h18v2Z" />
@@ -18,7 +18,7 @@
 
 		<!-- nav content -->
 		<div
-			class="fixed top-0 left-0 w-full h-full z-50 flex-col nav-content hidden opacity-0 font-PlusSans font-bold">
+			class="fixed top-0 left-0 w-full h-full z-[95] flex-col nav-content hidden opacity-0 font-PlusSans font-bold">
 			<!-- top -->
 			<div class="flex-1 flex">
 				<div class="relative flex-1 flex flex-col justify-between p-10">
@@ -58,7 +58,7 @@
 				<div class="w-[60%] h-full flex flex-col p-20 font-bold text-[3.7vw] font-SpaceGrotesk">
 
 					<NuxtLink :to="route.path" v-for="(route, i) in routes" :key="i"
-						class="flex items-center gap-5 group">
+						class="w-fit flex items-center gap-5 group">
 						<svg v-if="$route.path === route.path" class="w-10 h-10 drop-shadow-xl"
 							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path fill="#34222E" d="M14 2h-4v6H4v4h6v10h4V12h6V8h-6z" />
