@@ -27,35 +27,39 @@
 					<div class="flex flex-col gap-5 text-xl">
 						<!-- addr -->
 						<div class="">
-							<span class="block">Address:</span>
-							<span class="block font-SpaceGrotesk">CITY FAMILY CHURCH</span>
-							<span class="font-SpaceGrotesk">4 Mason Rd, NR6 6RF</span>
+							<span class="block font-Cinzel">Address:</span>
+							<span class="block font-PlusSans">CITY FAMILY CHURCH</span>
+							<span class="font-PlusSans">4 Mason Rd, NR6 6RF</span>
 						</div>
 						<!-- email -->
 						<div class="">
-							<span class="block">Email:</span>
-							<span class="font-SpaceGrotesk">cfc@example.com</span>
+							<span class="block font-Cinzel">Email:</span>
+							<span class="font-PlusSans">cfc@example.com</span>
 						</div>
 						<!-- call -->
 						<div class="">
-							<span class="block">Phone:</span>
-							<span class="font-SpaceGrotesk">+233 000 0000</span>
+							<span class="block font-Cinzel">Phone:</span>
+							<span class="font-PlusSans">+233 000 0000</span>
 						</div>
 
 					</div>
 					<!-- socials -->
 					<div class="flex flex-col gap-5 text-xl">
-						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Facebook</span>
-						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Youtube</span>
-						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Twitter</span>
-						<span class="cursor-pointer hover:text-tertiary font-SpaceGrotesk w-fit">Instagram</span>
+						<span
+							class="cursor-pointer hover:text-tertiary font-Cinzel hover:text-blue-600 w-fit">Facebook</span>
+						<span
+							class="cursor-pointer hover:text-tertiary font-Cinzel hover:text-blue-600 w-fit">Youtube</span>
+						<span
+							class="cursor-pointer hover:text-tertiary font-Cinzel hover:text-blue-600 w-fit">Twitter</span>
+						<span
+							class="cursor-pointer hover:text-tertiary font-Cinzel hover:text-blue-600 w-fit">Instagram</span>
 					</div>
 				</div>
 
 				<!-- lineV -->
 				<div class="w-[4px] h-0 bg-black line-v"></div>
 
-				<div class="w-[60%] h-full flex flex-col p-20 font-bold text-[3.7vw] font-SpaceGrotesk">
+				<div class="w-[60%] h-full flex flex-col p-20 font-bold text-[3.7vw] font-Cinzel">
 
 					<NuxtLink :to="route.path" v-for="(route, i) in routes" :key="i"
 						class="w-fit flex items-center gap-5 group">

@@ -33,9 +33,7 @@ onMounted(() => {
 	const tl = gsap.timeline()
 	const txt_containers = gsap.utils.toArray('.txt-container')
 
-	console.log(document.body.style.overflow)
 	document.body.style.overflow = 'hidden';
-	console.log(document.body.style.overflow)
 
 	tl.to(txt_containers, {
 		delay: .8,

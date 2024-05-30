@@ -1,8 +1,7 @@
 <template>
 	<Loading></Loading>
 
-	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-PlusSans"
-		id="church">
+	<main class="bg-clrr1 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-PlusSans" id="church">
 
 		<!-- welcome hero -->
 		<section class="welcome-hero w-full h-[calc(110vh)] flex flex-col bg-white z-10 section0">
@@ -97,7 +96,7 @@
 				</div>
 
 				<div
-					class="flex flex-col justify-center items-center font-bold text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mission opacity-0 font-PlusSans">
+					class="flex flex-col justify-center items-center font-bold text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mission opacity-0 font-Cinzel uppercase">
 					<span class="">Our Mission Is For YOU To Be</span>
 					<span class="">Be In Christ</span>
 				</div>
@@ -108,21 +107,21 @@
 		<!-- message 3 -->
 		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
 			<div class="w-full bg-clrr1">
-				<h1 class="text-6xl font-black text-black bg-clr2 pt-16 pl-20 rounded-t-[70px]">
-					<div class="head-text font-PlusSans">
-						<BubbleText text="Lorem Text About Church" default_clr="000" />
+				<h1 class="text-6xl font-black text-black bg-orange-400 pt-16 pl-20 rounded-t-[70px]">
+					<div class="head-text font-Cinzel">
+						<BubbleText text="Lorem Text About Church" default_clr="fff" />
 
 					</div>
 				</h1>
 			</div>
-			<section class="w-full min-h-[600px] bg-clr2 rounded-b-[70px] px-10 relative">
+			<section class="w-full min-h-[600px] bg-orange-400 rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
 
 						<div v-for="(item, i) in dataCards" :key="i" class="item flex flex-col p-10 justify-between">
 							<div class="flex flex-col gap-6 justify-between">
-								<div class="font-bold text-3xl font-PlusSans">{{ item.title }}</div>
+								<div class="font-bold text-3xl font-Cinzel">{{ item.title }}</div>
 								<div class="font-medium">
 									{{ item.content }}
 								</div>
@@ -139,13 +138,13 @@
 			</section>
 			<!-- end quote marquee -->
 			<section class="w-full h-[50vh] bg-white py-20 pb-60">
-				<Marquee class="text-[10vw]" classer="px-10"></Marquee />
+				<Marquee class="text-[10vw] font-SpaceGrotesk" classer="px-10"></Marquee />
 			</section>
 
 		</section>
 
 		<!-- space for footer to show -->
-		<section class="footer-container w-full h-[85vh] pointer-events-none">
+		<section class="footer-container w-full h-[65vh] pointer-events-none">
 		</section>
 
 
@@ -161,6 +160,27 @@ const { loading_anim_done } = storeToRefs(appStore())
 appStore().$patch((state) => {
 	return state.loading = true
 })
+
+// footer animation
+onMounted(() => {
+	const conts = gsap.utils.toArray('.cont')
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.footer-container',
+			start: 'bottom top',
+		},
+	})
+
+	tl.fromTo(conts, {
+		opacity: 0,
+	}, {
+		duration: .8,
+		stagger: .3,
+		opacity: 1,
+		ease: 'linear',
+	})
+})
+
 
 onMounted(() => {
 	window.scrollTo(0, 0)

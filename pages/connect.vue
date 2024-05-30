@@ -1,11 +1,10 @@
 <template>
 	<Loading></Loading>
 
-	<main class="bg-neutral-100 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-PlusSans"
-		id="church">
+	<main class="bg-clrr2 w-full min-h-screen scroll-smooth overflow-hidden relative z-0 font-PlusSans" id="church">
 
 		<!-- welcome hero -->
-		<section class="welcome-hero w-full h-[calc(110vh)] flex flex-col bg-white z-10 section0">
+		<section class="welcome-hero w-full h-[calc(110vh)] flex flex-col bg-clrr2 z-10 section0">
 			<div class="w-full h-full overflow-hidden rounded-b-[70px] relative">
 				<!-- info tab -->
 				<AnimHero>
@@ -16,7 +15,7 @@
 
 				</AnimHero>
 				<!-- bg-img -->
-				<img src="../assets/praying2.jpg" alt="" class="object-cover w-full h-full scale-125 home-img">
+				<img src="../assets/bg.jpg" alt="" class="object-cover w-full h-full scale-125 home-img">
 			</div>
 		</section>
 
@@ -30,9 +29,9 @@
 		<SummaryBar />
 
 		<!-- message -->
-		<div class="w-full h-full bg-clrr1">
+		<div class="w-full h-full bg-clrr2">
 			<section
-				class="w-full min-h-[90vh] bg-white rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1 justify-center">
+				class="w-full min-h-[90vh] bg-clrr2 rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1 justify-center">
 				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
 					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
 						<BubbleText text="The Head" default_clr="000" />
@@ -65,23 +64,23 @@
 
 
 		<!-- message 3 -->
-		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
-			<div class="w-full bg-clrr1">
-				<h1 class="text-6xl font-black text-black bg-secondary pt-16 pl-20 rounded-t-[70px]">
-					<div class="head-text font-PlusSans">
-						Lorem Text About Church
+		<section class="w-full bg-neutral-100 rounded-b-[70px flex-col flex section3">
+			<div class="w-full bg-clrr2">
+				<h1 class="text-6xl font-black text-black bg-orange-400 pt-16 pl-20 rounded-t-[70px]">
+					<div class="head-text font-Cinzel text-[5rem]">
+						<BubbleText text="New Here?" default_clr="fff" />
 					</div>
 				</h1>
 			</div>
-			<section class="w-full min-h-[600px] bg-secondary rounded-b-[70px] px-10 relative">
+			<section class="w-full min-h-[600px] bg-orange-400 rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
 
 						<div v-for="(item, i) in dataCards" :key="i"
-							class="item flex flex-col p-10 justify-between hover:bg-secondary">
+							class="item flex flex-col p-10 justify-between hover:bg-orange-400">
 							<div class="flex flex-col gap-6 justify-between">
-								<div class="font-bold text-3xl font-PlusSans">{{ item.title }}</div>
+								<div class="font-bold text-3xl font-Cinzel">{{ item.title }}</div>
 								<div class="font-medium">
 									{{ item.content }}
 								</div>
@@ -96,15 +95,79 @@
 					</div>
 				</div>
 			</section>
-			<!-- end quote marquee -->
-			<section class="w-full h-[50vh] bg-white py-20 pb-60">
-				<Marquee text="Quote Marquee" />
+
+			<section
+				class="w-full h-screen bg-neutral-100 border-b-[5px] border-black section-group flex p-10 py-12 gap-2 pt-20 justify-center">
+
+				<div class="flex-1 relative">
+					<!-- img1 -->
+					<div ref="img1" class="absolute top-0 left-0 w-80 aspect-square img1">
+						<img src="../assets/talk.png" alt=""
+							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
+					</div>
+					<!-- img2 -->
+					<div ref="img2" class="absolute bottom-0 right-0 w-80 aspect-square img2">
+						<img src="../assets/praying.png" alt=""
+							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
+					</div>
+
+				</div>
+
+				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
+					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
+						<BubbleText text="Find A Group" default_clr="000" />
+						<br />
+						<!-- <BubbleText text="Group" default_clr="000" /> -->
+					</h3>
+					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+						beatae
+						obcaecati
+						sit
+						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
+					<div class="btn bg-black text-white rounded-full w-fit font-bold uppercase text-lg px-5">Learn More
+					</div>
+				</div>
+
+			</section>
+
+
+			<section
+				class="w-full h-screen bg-neutral-100 border-b-[5px] border-black section-group flex p-10 py-12 gap-2 pt-20 justify-center">
+
+				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
+					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
+						<BubbleText text="Find A Team" default_clr="000" />
+						<br />
+						<!-- <BubbleText text="Group" default_clr="000" /> -->
+					</h3>
+					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+						beatae
+						obcaecati
+						sit
+						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
+					<div class="btn bg-black text-white rounded-full w-fit font-bold uppercase text-lg px-5">Learn More
+					</div>
+				</div>
+
+				<div class="flex-1 relative">
+					<!-- img1 -->
+					<div ref="img1" class="absolute top-0 left-0 w-80 aspect-square img1">
+						<img src="../assets/talk.png" alt=""
+							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
+					</div>
+					<!-- img2 -->
+					<div ref="img2" class="absolute bottom-0 right-0 w-80 aspect-square img2">
+						<img src="../assets/praying.png" alt=""
+							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
+					</div>
+
+				</div>
 			</section>
 
 		</section>
 
 		<!-- space for footer to show -->
-		<section class="footer-container w-full h-[85vh] pointer-events-none">
+		<section class="footer-container w-full h-[65vh] pointer-events-none">
 		</section>
 
 
@@ -113,13 +176,36 @@
 </template>
 
 <script setup lang="ts">
+import { useTitle } from '@vueuse/core';
 import appStore from '../stores/app';
-const { loading, loading_anim_done } = storeToRefs(appStore())
+const { loading_anim_done } = storeToRefs(appStore())
 
 appStore().$patch((state) => {
 	return state.loading = true
 })
 
+// footer animation
+onMounted(() => {
+	window.scrollTo(0, 0)
+	useTitle('CF Church - Connect')
+
+	const conts = gsap.utils.toArray('.cont')
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.footer-container',
+			start: 'top 80%',
+		},
+	})
+
+	tl.fromTo(conts, {
+		opacity: 0,
+	}, {
+		duration: .8,
+		stagger: .3,
+		opacity: 1,
+		ease: 'linear',
+	})
+})
 
 
 const img1 = ref()
@@ -129,17 +215,17 @@ let startX = ref()
 let x = ref()
 const dataCards = ref([
 	{
-		title: 'Services',
+		title: 'Alpha Hour',
 		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
 		action: 'Learn More'
 	},
 	{
-		title: 'Services',
+		title: 'Chidren Time',
 		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
 		action: 'Learn More'
 	},
 	{
-		title: 'Services',
+		title: 'Mid-Week Service',
 		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
 		action: 'Learn More'
 	},
