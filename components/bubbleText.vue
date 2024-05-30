@@ -1,5 +1,5 @@
 <template>
-	<span @mouseleave="removeClasses" ref="container" class="bubble-text font-black">
+	<span @mouseleave="removeClasses" ref="container" class="cursor-default bubble-text font-thin">
 		<span ref="hover_spans" v-for="(txt, i) in text.split('')" @mouseleave="removeClasses"
 			:class="['transition-all duration-150 ease-out', `__${txt}`]"
 			@mouseover="$event => setHoverStyle($event, i)" :key="i">{{ txt
@@ -54,7 +54,7 @@ function setHoverStyle(e: MouseEvent, idx: number) {
 
 <style scoped>
 .hover {
-	@apply font-extralight;
+	@apply font-black;
 }
 
 .hover-adj {
