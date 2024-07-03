@@ -55,7 +55,7 @@ import connect from '~/components/dash/connect.vue';
 import visit from '~/components/dash/visit.vue';
 import giving from '~/components/dash/giving.vue';
 
-const page = ref(home);
+const page = shallowRef(home);
 
 const routes = ref([
 	{

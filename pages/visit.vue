@@ -86,9 +86,9 @@
 
 
 
-					<div class="">
+					<div class="overflow-y-auto">
 
-						<div v-for="i in 5" class="collapse collapse-plus bg-clrr1-200">
+						<div v-for="i in 20" class="collapse collapse-plus bg-clrr1-200">
 							<input type="radio" name="my-accordion-3" />
 							<div class="collapse-title text-xl font-medium">
 								Click to open this one and close others
