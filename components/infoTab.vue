@@ -3,21 +3,21 @@
 		class="w-full max-w-[900px] mx-auto h-full bg-clr1 rounded-[50px] relative drop-shadow-lg shadow-2xl py-5 px-8 flex flex-col gap-1">
 		<!-- arrows -->
 		<!-- back -->
-		<div
+		<!-- <div
 			class="absolute top-1/2 left-[-24px] -translate-y-1/2 w-12 h-12 rounded-full border-2 border-black bg-clrr2 grid place-items-center">
 			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 				<path fill="currentColor"
 					d="m11.475 18.025l-8.15-5.175q-.475-.3-.475-.85t.475-.85l8.15-5.175q.5-.325 1.013-.037t.512.887V11h8q.425 0 .713.288T22 12t-.288.713T21 13h-8v4.175q0 .6-.513.888t-1.012-.038" />
 			</svg>
-		</div>
+		</div> -->
 		<!-- foward -->
-		<div
+		<!-- <div
 			class="absolute top-1/2 right-[-24px] -translate-y-1/2 w-12 h-12 rounded-full border-2 border-black bg-clrr2 grid place-items-center">
 			<svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 				<path fill="currentColor"
 					d="m11.475 18.025l-8.15-5.175q-.475-.3-.475-.85t.475-.85l8.15-5.175q.5-.325 1.013-.037t.512.887V11h8q.425 0 .713.288T22 12t-.288.713T21 13h-8v4.175q0 .6-.513.888t-1.012-.038" />
 			</svg>
-		</div>
+		</div> -->
 
 		<!-- top -->
 		<div class="flex justify-between items-center w-full">
@@ -37,8 +37,9 @@
 			</div>
 
 
-			<button class="self-end w-60 bg-black rounded-full h-14 text-white font-PlusSans">
-				Action Here
+			<button
+				class="self-end w-60 bg-clrr2 shadow-md hover:scale-95 transition-all duration-150 ease-out rounded-full h-14 text-black font-bold font-PlusSans">
+				GO
 			</button>
 		</div>
 

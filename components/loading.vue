@@ -38,7 +38,7 @@ onMounted(() => {
 	tl.to(txt_containers, {
 		delay: .8,
 		opacity: 1,
-		duration: .3,
+		duration: .1,
 		stagger: {
 			amount: .6,
 			from: 'start',

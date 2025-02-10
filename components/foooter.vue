@@ -14,16 +14,16 @@
 					<h3 class="font-bold text-2xl font-Cinzel">Contact Us</h3>
 					<div class="flex flex-col gap-1">
 						<span class="">
-							CITY FAMILY CHURCH
+							{{ contactUs.addr0 }}
 						</span>
 						<span class="">
-							9 ALPHA Rd, NR0 0AA
+							{{ contactUs.addr1 }}
 						</span>
 						<span class="">
-							‍info@church.com
+							{{ contactUs.email }}
 						</span>
 						<span class="">
-							‍01234 567890
+							{{ contactUs.phone }}
 						</span>
 					</div>
 				</div>
@@ -66,13 +66,12 @@
 				<div class="w-full h-full flex flex-col items-center px-10">
 
 					<h3 class="font-bold text-2xl w-full pb-1 font-Cinzel">Subscribe To Our Newsletter</h3>
-					<div class="w-full pb-10 font-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Tenetur,
-						asperiores!</div>
-					<input class="mb-3 w-full h-10 rounded-2xl border border-black/20 bg-white" type="text" name=""
-						id="">
-					<input class="mb-3 w-full h-10 rounded-2xl border border-black/20 bg-white" type="text" name=""
-						id="">
+					<div class="w-full pb-10 font-medium">Let us get to know you as well as share the gospel with you.
+					</div>
+					<input class="mb-3 w-full h-10 rounded-2xl border px-5 border-black/20 bg-white" type="text" name=""
+						placeholder="Name" id="">
+					<input class="mb-3 w-full h-10 rounded-2xl border px-5 border-black/20 bg-white" type="text" name=""
+						placeholder="Email" id="">
 					<div class="mb-3 w-full h-10 rounded-2xl border border-black/20 bg-white flex items-center px-3">
 						<input class="w-5 aspect-square" type="radio" name="" id="">
 						<span class="ml-3 text-xs">I accept City Family Church's privacy policy</span>
@@ -95,8 +94,8 @@ const { $gsap: gsap } = useNuxtApp()
 const contactUs = ref({
 	addr0: 'CITY FAMILY CHURCH',
 	addr1: '9 ALPHA Rd, NR0 0AA',
-	email: 'info@church.com',
-	phone: '01234 567890',
+	email: 'ltwc-main@ltwc.com',
+	phone: '+1 490-554-5543',
 })
 
 const socials = ref([
@@ -107,15 +106,11 @@ const socials = ref([
 ])
 
 const links = ref([
-	'Homepage',
+	'Home',
 	'About',
 	'Connect',
 	'Giving',
-	'Churches life',
 	'Plan your visit',
-	'New build',
-	'Policies',
-	'Vacancies',
 ])
 
 </script>

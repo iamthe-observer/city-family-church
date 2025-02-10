@@ -96,17 +96,16 @@
 				</div>
 			</section>
 
-			<section
-				class="w-full h-screen bg-neutral-100 border-b-[5px] border-black section-group flex p-10 py-12 gap-2 pt-20 justify-center">
+			<section class="w-full h-screen bg-neutral-100 section-group flex p-10 py-12 gap-2 pt-20 justify-center">
 
 				<div class="flex-1 relative">
 					<!-- img1 -->
-					<div ref="img1" class="absolute top-0 left-0 w-80 aspect-square img1">
+					<div ref="img1" class="absolute top-14 left-14 w-80 aspect-square img1">
 						<img src="../assets/talk.png" alt=""
 							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
-					<div ref="img2" class="absolute bottom-0 right-0 w-80 aspect-square img2">
+					<div ref="img2" class="absolute bottom-14 right-14 w-80 aspect-square img2">
 						<img src="../assets/praying.png" alt=""
 							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
@@ -115,7 +114,7 @@
 
 				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
 					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
-						<BubbleText text="Find A Group" default_clr="000" />
+						<BubbleText text="Find A Family" default_clr="000" />
 						<br />
 						<!-- <BubbleText text="Group" default_clr="000" /> -->
 					</h3>
@@ -132,11 +131,11 @@
 
 
 			<section
-				class="w-full h-screen bg-neutral-100 border-b-[5px] border-black section-group flex p-10 py-12 gap-2 pt-20 justify-center">
+				class="w-full h-screen bg-neutral-100 border-b-[3px] border-black/15 shadow-lg section-group flex p-10 py-12 gap-2 pt-20 justify-center">
 
 				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
 					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
-						<BubbleText text="Find A Team" default_clr="000" />
+						<BubbleText text="Talents for GOD" default_clr="000" />
 						<br />
 						<!-- <BubbleText text="Group" default_clr="000" /> -->
 					</h3>
@@ -151,12 +150,12 @@
 
 				<div class="flex-1 relative">
 					<!-- img1 -->
-					<div ref="img1" class="absolute top-0 left-0 w-80 aspect-square img1">
+					<div ref="img1" class="absolute top-14 left-14 w-80 aspect-square img1">
 						<img src="../assets/talk.png" alt=""
 							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
-					<div ref="img2" class="absolute bottom-0 right-0 w-80 aspect-square img2">
+					<div ref="img2" class="absolute bottom-10 right-10 w-80 aspect-square img2">
 						<img src="../assets/praying.png" alt=""
 							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
@@ -167,7 +166,7 @@
 		</section>
 
 		<!-- space for footer to show -->
-		<section class="footer-container w-full h-[65vh] pointer-events-none">
+		<section class="footer-container w-full h-[100vh] pointer-events-none">
 		</section>
 
 

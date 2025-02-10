@@ -10,7 +10,7 @@
 				<!-- info tab -->
 				<AnimHero>
 					<span
-						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] font-black uppercase font-Cinzel ">
+						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] font-black uppercase font-Cinzel drop-shadow-lg">
 						VISIT
 						US</span>
 				</AnimHero>
@@ -104,8 +104,8 @@
 		</section>
 
 		<!-- message 3 -->
-		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
-			<div class="w-full bg-clrr1">
+		<!-- <section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3"> -->
+		<!-- <div class="w-full bg-clrr1">
 				<h1 class="text-6xl font-black text-black bg-clr1 pt-16 pl-20 rounded-t-[70px]">
 					<div class="head-text font-Cinzel">
 						<BubbleText default_clr="000" text="Experience worshipping" />
@@ -114,8 +114,8 @@
 
 					</div>
 				</h1>
-			</div>
-			<section class="w-full min-h-[600px] bg-clr1 rounded-b-[70px] px-10 relative">
+			</div> -->
+		<!-- <section class="w-full min-h-[600px] bg-clr1 rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
@@ -137,16 +137,16 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end quote marquee -->
-			<section class="w-full h-[50vh] bg-white py-20 pb-60">
+			</section> -->
+		<!-- end quote marquee -->
+		<!-- <section class="w-full h-[50vh] bg-white py-20 pb-60">
 				<Marquee text="Quote Marquee" />
-			</section>
+			</section> -->
 
-		</section>
+		<!-- </section> -->
 
 		<!-- space for footer to show -->
-		<section class="footer-container w-full h-[85vh] pointer-events-none">
+		<section class="footer-container w-full h-[100vh] pointer-events-none">
 		</section>
 
 
@@ -284,52 +284,52 @@ onMounted(() => {
 	})
 
 
-	let container = document.querySelector<HTMLDivElement>(".Ccontainer")
-	let innerContainer = document.querySelector<HTMLDivElement>(".items-container")
+	// let container = document.querySelector<HTMLDivElement>(".Ccontainer")
+	// let innerContainer = document.querySelector<HTMLDivElement>(".items-container")
 
-	container!.addEventListener("mousedown", (e) => {
-		pressed.value = true;
-		startX.value = e.offsetX - innerContainer!.offsetLeft;
-		container!.style.cursor = "grabbing";
-	});
+	// container!.addEventListener("mousedown", (e) => {
+	// 	pressed.value = true;
+	// 	startX.value = e.offsetX - innerContainer!.offsetLeft;
+	// 	container!.style.cursor = "grabbing";
+	// });
 
-	container!.addEventListener("mouseenter", () => {
-		container!.style.cursor = "grab";
-	});
+	// container!.addEventListener("mouseenter", () => {
+	// 	container!.style.cursor = "grab";
+	// });
 
-	container!.addEventListener("mouseup", () => {
-		pressed.value = false;
-		container!.style.cursor = "grab";
-	});
+	// container!.addEventListener("mouseup", () => {
+	// 	pressed.value = false;
+	// 	container!.style.cursor = "grab";
+	// });
 
-	container!.addEventListener("mousemove", (e) => {
-		if (!pressed.value) return;
-		e.preventDefault();
+	// container!.addEventListener("mousemove", (e) => {
+	// 	if (!pressed.value) return;
+	// 	e.preventDefault();
 
-		x.value = e.offsetX;
-		innerContainer!.style.left = `${x.value - startX.value}px`;
-	});
-	let boundItems = () => {
-		let outer = container!.getBoundingClientRect();
-		let inner = innerContainer!.getBoundingClientRect();
+	// 	x.value = e.offsetX;
+	// 	innerContainer!.style.left = `${x.value - startX.value}px`;
+	// });
+	// let boundItems = () => {
+	// 	let outer = container!.getBoundingClientRect();
+	// 	let inner = innerContainer!.getBoundingClientRect();
 
-		if (parseInt(innerContainer!.style.left) > 0) {
-			innerContainer!.style.left = "0px";
-		}
+	// 	if (parseInt(innerContainer!.style.left) > 0) {
+	// 		innerContainer!.style.left = "0px";
+	// 	}
 
-		if (inner.right < outer.right) {
-			innerContainer!.style.left = `-${inner.width - outer.width}px`;
-		}
-	}
+	// 	if (inner.right < outer.right) {
+	// 		innerContainer!.style.left = `-${inner.width - outer.width}px`;
+	// 	}
+	// }
 
-	container!.addEventListener("mousemove", (e) => {
-		if (!pressed.value) return;
-		e.preventDefault();
+	// container!.addEventListener("mousemove", (e) => {
+	// 	if (!pressed.value) return;
+	// 	e.preventDefault();
 
-		x.value = e.offsetX;
-		innerContainer!.style.left = `${x.value - startX.value}px`;
-		boundItems();
-	});
+	// 	x.value = e.offsetX;
+	// 	innerContainer!.style.left = `${x.value - startX.value}px`;
+	// 	boundItems();
+	// });
 
 })
 </script>

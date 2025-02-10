@@ -142,7 +142,7 @@
 		</section>
 
 		<!-- space for footer to show -->
-		<section class="footer-container w-full h-[85vh] pointer-events-none">
+		<section class="footer-container w-full h-[100vh] pointer-events-none">
 		</section>
 
 
