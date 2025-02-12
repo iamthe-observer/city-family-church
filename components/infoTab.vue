@@ -22,24 +22,23 @@
 		<!-- top -->
 		<div class="flex justify-between items-center w-full">
 			<span class="uppercase font-PlusSans text-xs font-semibold">What's On</span>
-			<span class="flex items-center w-[300px] gap-10" v-for="i in 3">
-				.
-			</span>
+			<!-- <span class="flex items-center w-[300px] gap-10" v-for="i in 3">
+				...
+			</span> -->
 		</div>
 		<!-- bottom -->
 		<div class=" w-full h-full flex justify-between">
 			<div class="flex flex-col">
-				<h3 class="font-bold text-2xl pb-2 font-Cinzel">Head</h3>
-				<span class="pr-20 font-semibold text-lg">Content Lorem ipsum dolor sit amet consectetur adipisicing
-					elit.
-					Asperiores,
-					culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, numquam?</span>
+				<h3 class="font-bold text-2xl pb-2 font-Cinzel">Services</h3>
+				<span class="pr-20 font-semibold text-lg">We gather each Sunday at 9:30a and 11:45a ET and would love
+					for you to join us!
+				</span>
 			</div>
 
 
 			<button
-				class="self-end w-60 bg-clrr2 shadow-md hover:scale-95 transition-all duration-150 ease-out rounded-full h-14 text-black font-bold font-PlusSans">
-				GO
+				class="self-end w-fit whitespace-nowrap px-10 bg-clrr2 shadow-md hover:scale-95 transition-all duration-150 ease-out rounded-full h-14 text-black font-bold font-PlusSans">
+				Join Us
 			</button>
 		</div>
 

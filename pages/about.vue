@@ -10,12 +10,13 @@
 				<!-- info tab -->
 				<AnimHero>
 					<span
-						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] font-black uppercase font-Cinzel ">
+						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] font-black uppercase font-Cinzel drop-shadow-lg">
 						About
 						Us</span>
 				</AnimHero>
 				<!-- bg-img -->
-				<img src="../assets/praying.png" alt="" class="object-cover w-full h-full scale-125 home-img">
+				<img src="../assets/edited/05.jpg" alt=""
+					class="object-cover w-full h-full brightness-75 scale-125 home-img">
 			</div>
 		</section>
 
@@ -79,66 +80,71 @@
 				<div
 					class="absolute font-black text-[8vw] top-32 left-[300px] flex items-center font-BarlowCondensed italic">
 					<span class="born opacity-0 uppercase"
-						v-for="(letter, i) in ['values1'].map(str => str.split('')).flat()" :key="i">
+						v-for="(letter, i) in ['Community'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
 				<div
-					class="absolute font-black text-[8vw] top-[30%] right-[400px] flex items-center font-BarlowCondensed italic">
+					class="absolute font-black text-[8vw] top-[30%] right-[300px] flex items-center font-BarlowCondensed italic">
 					<span class="in opacity-0 uppercase"
-						v-for="(letter, i) in ['values2'].map(str => str.split('')).flat()" :key="i">
+						v-for="(letter, i) in ['LOVE'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
 				<div
 					class="absolute font-black text-[8vw] bottom-32 left-1/2 -translate-x-1/2 flex items-center font-BarlowCondensed italic">
 					<span class="christ opacity-0 uppercase"
-						v-for="(letter, i) in ['value3'].map(str => str.split('')).flat()" :key="i">
+						v-for="(letter, i) in ['Inclusivity'].map(str => str.split('')).flat()" :key="i">
 						{{ letter }}
 					</span>
 				</div>
 
 				<div
 					class="flex flex-col justify-center items-center font-bold text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mission opacity-0 font-PlusSans">
-					<span class="">Our Values Lorem ipsum dolor sit amet.</span>
-					<span class="">Lorem, ipsum dolor.</span>
+					<span class="text-3xl font-Cinzel">Our Core Values are</span>
 				</div>
 			</div>
 
 		</section>
 
 		<!-- message 3 -->
-		<section class="w-full bg-white rounded-b-[70px flex-col flex border-black border-b-2 section3">
+		<section class="w-full bg-white rounded-b-[70px flex-col flex rounded-b-[70px] section3 shadow-xl">
 			<div class="w-full bg-clrr1">
-				<h1 class="text-6xl font-black text-black bg-secondary pt-16 pl-20 rounded-t-[70px]">
-					<div class="head-text font-PlusSans">
-						<BubbleText text="Beliefs" default_clr="000" />
+				<h1 class="text-6xl font-black text-black bg-orange-300 pt-16 pl-20 rounded-t-[70px]">
+					<div class="head-text font-Cinzel">
+						<BubbleText text="Our Beliefs" default_clr="000" />
+
 					</div>
 				</h1>
 			</div>
-			<section class="w-full min-h-[600px] bg-secondary rounded-b-[70px] px-10 relative">
+
+			<section class="w-full min-h-[600px] bg-orange-300 rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
 
-						<div v-for="(item, i) in dataCards" :key="i"
-							class="item flex flex-col p-10 justify-between hover:bg-secondary h-fit">
-							<div class="flex flex-col gap-6 justify-between">
-								<div class="font-bold text-3xl font-PlusSans">{{ item.title }}</div>
+						<div v-for="(item, i) in data" :key="i" class="item flex flex-col p-10 justify-between">
+							<div class="flex flex-col gap-4 justify-between">
+								<div class="font-bold text-2xl font-Cinzel">{{ item.head }}</div>
 								<div class="font-medium">
-									{{ item.content }}
+									{{ item.body }}
 								</div>
 							</div>
 
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end quote marquee -->
-			<section class="w-full h-[50vh] bg-white py-20 pb-60">
-				<Marquee text="JOHN 3:16 -" />
-			</section>
 
+				<div class="flex w-full items-center justify-end gap-2 absolute bottom-10 right-32">
+					<span class="drag_txt font-PlusSans font-lighter text-xl text-black font-semibold">Drag to
+						Scroll</span>
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 aspect-square" viewBox="0 0 14 14">
+						<path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+							d="m13.478 11.832l-.46-2.757a2.573 2.573 0 0 0-2.961-2.114l-2.171.362l-.683-4.09a1.194 1.194 0 0 0-1.374-.98v0c-.65.108-1.09.723-.98 1.374l.894 5.36l-.363.133a1.715 1.715 0 0 0-.643 2.803l.184.19l.954.988M1.75.5L.5 1.75L1.75 3M.5 1.75h3M10.25.5l1.25 1.25L10.25 3m1.25-1.25h-3" />
+					</svg>
+				</div>
+
+			</section>
 		</section>
 
 		<!-- space for footer to show -->
@@ -170,41 +176,38 @@ const img2 = ref()
 let pressed = ref(false)
 let startX = ref()
 let x = ref()
-const dataCards = ref([
+const data = ref([
 	{
-		title: 'Beliefs',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum ',
-		action: 'Learn More'
+		head: "Bible's Truth",
+		body: 'The Bible is the inspired word of God and is the ultimate authority for all matters of faith and practice.',
 	},
 	{
-		title: 'Beliefs',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		head: 'Jesus',
+		body: 'Jesus Christ is the Son of God and the only way to salvation.',
 	},
 	{
-		title: 'Beliefs',
-		content: 'Lorem it, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		head: 'Faith',
+		body: "Salvation is a free gift of God's grace, received through faith in Jesus Christ.",
 	},
 	{
-		title: 'Beliefs',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repelliam nisi?',
-		action: 'Learn More'
+		head: 'Holy Spirit',
+		body: 'The Holy Spirit empowers believers to live a godly life and is present to guide and direct them.',
 	},
 	{
-		title: 'Beliefs',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nisi?',
-		action: 'Learn More'
+		head: 'Baptism',
+		body: "Baptism by immersion is an important step of obedience for believers, signifying their identification with Christ's death, burial, and resurrection.",
 	},
 	{
-		title: 'Beliefs',
-		content: 'Loi quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		head: 'Communion',
+		body: "Communion, or the Lord's Supper, is a symbolic remembrance of Christ's sacrifice for believers.",
 	},
 	{
-		title: 'Beliefs',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora situr veniam nisi?',
-		action: 'Learn More'
+		head: 'Church as a Body',
+		body: 'The church is the body of Christ and is called to carry out His mission on earth.',
+	},
+	{
+		head: 'His Return',
+		body: 'The return of Jesus Christ is certain and will be visible, personal, and triumphant.',
 	},
 ])
 

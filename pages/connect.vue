@@ -9,13 +9,14 @@
 				<!-- info tab -->
 				<AnimHero>
 					<span
-						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] font-black uppercase font-Cinzel">
+						class="w-full h-full grid place-items-center text-clrr2 text-[8vw] drop-shadow-lg font-black uppercase font-Cinzel">
 						Connect
 					</span>
 
 				</AnimHero>
 				<!-- bg-img -->
-				<img src="../assets/bg.jpg" alt="" class="object-cover w-full h-full scale-125 home-img">
+				<img src="../assets/edited/02.webp" alt=""
+					class="object-cover w-full h-full brightness-75 scale-125 home-img">
 			</div>
 		</section>
 
@@ -33,26 +34,25 @@
 			<section
 				class="w-full min-h-[90vh] bg-clrr2 rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1 justify-center">
 				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
-					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
-						<BubbleText text="The Head" default_clr="000" />
+					<h3 class="font-bold text-[3rem] pb-2 leading-snug font-Cinzel">
+						<BubbleText text="Sundays At" default_clr="000" />
 						<br />
-						<BubbleText text="Topic" default_clr="000" />
+						<BubbleText text="City Family Church" default_clr="000" />
 					</h3>
-					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae
-						obcaecati
-						sit
-						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
+					<span class="w-4/5 text-2xl">We strive in building a community founded on the truth of Christ's
+						teachings,where
+						love, faith and service come together to make a positive impact on the world.</span>
 				</div>
 
 				<div class="flex-1 relative 1/2">
 					<!-- img1 -->
-					<div ref="img1" class="absolute top-0 right-1/2 translate-x-[90%] w-80 aspect-square img1">
-						<img src="../assets/talk.png" alt=""
+					<div ref="img1" class="absolute top-20 right-1/2 translate-x-[90%] w-80 aspect-square img1">
+						<img src="../assets/edited/07.jpg" alt=""
 							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
-					<div ref="img2" class="absolute bottom-0 left-1/2 translate-x-[-90%] w-80 aspect-square img2">
-						<img src="../assets/praying.png" alt=""
+					<div ref="img2" class="absolute bottom-20 left-1/2 translate-x-[-90%] w-80 aspect-square img2">
+						<img src="https://live.staticflickr.com/65535/52919863688_2e39f97c4d_o.png" alt=""
 							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
 
@@ -64,32 +64,32 @@
 
 
 		<!-- message 3 -->
-		<section class="w-full bg-neutral-100 rounded-b-[70px flex-col flex section3">
+		<section class="w-full bg-neutral-100 rounded-b-[70px] flex-col flex section3">
 			<div class="w-full bg-clrr2">
-				<h1 class="text-6xl font-black text-black bg-orange-400 pt-16 pl-20 rounded-t-[70px]">
-					<div class="head-text font-Cinzel text-[5rem]">
-						<BubbleText text="New Here?" default_clr="fff" />
+				<h1 class="text-6xl font-black text-black bg-orange-300 pt-16 pl-20 rounded-t-[70px]">
+					<div class="head-text font-Cinzel text-[3rem]">
+						<BubbleText text="What to Expect at City Family Church" default_clr="000" />
 					</div>
 				</h1>
 			</div>
-			<section class="w-full min-h-[600px] bg-orange-400 rounded-b-[70px] px-10 relative">
+			<section class="w-full min-h-[600px] bg-orange-300 rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
 
-						<div v-for="(item, i) in dataCards" :key="i"
+						<div v-for="(item, i) in data" :key="i"
 							class="item flex flex-col p-10 justify-between hover:bg-orange-400">
 							<div class="flex flex-col gap-6 justify-between">
 								<div class="font-bold text-3xl font-Cinzel">{{ item.title }}</div>
 								<div class="font-medium">
-									{{ item.content }}
+									{{ item.body }}
 								</div>
 							</div>
-							<div class="w-full flex justify-end">
+							<!-- <div class="w-full flex justify-end">
 								<button
 									class="btn p-3 px-8 rounded-full bg-clrr2 text-black font-bold uppercase font-PlusSans hover:text-white hover:bg-black">{{
 										item.action }}</button>
-							</div>
+							</div> -->
 
 						</div>
 					</div>
@@ -101,12 +101,12 @@
 				<div class="flex-1 relative">
 					<!-- img1 -->
 					<div ref="img1" class="absolute top-14 left-14 w-80 aspect-square img1">
-						<img src="../assets/talk.png" alt=""
+						<img src="https://live.staticflickr.com/65535/52864570107_e0bc628f1b_o.jpg" alt=""
 							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
 					<div ref="img2" class="absolute bottom-14 right-14 w-80 aspect-square img2">
-						<img src="../assets/praying.png" alt=""
+						<img src="https://live.staticflickr.com/65535/52865540210_d5010dea3e_o.jpg" alt=""
 							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
 
@@ -118,11 +118,11 @@
 						<br />
 						<!-- <BubbleText text="Group" default_clr="000" /> -->
 					</h3>
-					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-						beatae
-						obcaecati
-						sit
-						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
+					<span class="w-4/5 text-2xl">We foster a community rooted in the truth of Christ's teachings,where
+						honesty, integrity, and accountability are upheld to make a positive impact on society.
+
+						At Living Truth Worship Centre, we welcome people of all ages to join us for Sunday service.
+						Read on to discover what to expect during our gatherings.</span>
 					<div class="btn bg-black text-white rounded-full w-fit font-bold uppercase text-lg px-5">Learn More
 					</div>
 				</div>
@@ -131,32 +131,39 @@
 
 
 			<section
-				class="w-full h-screen bg-neutral-100 border-b-[3px] border-black/15 shadow-lg section-group flex p-10 py-12 gap-2 pt-20 justify-center">
+				class="w-full h-screen bg-neutral-100 border-b-[3px] border-black/15 shadow-lg section-group flex p-10 py-12 gap-2 pt-20 justify-center rounded-b-[70px]">
 
-				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
-					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
-						<BubbleText text="Talents for GOD" default_clr="000" />
+				<div class="gap-2 flex flex-col justify-center w-1/2 pl-32">
+					<h3 class="font-bold text-[2rem] leading-snug font-Cinzel">
+						<BubbleText text="When Do We Gather?" default_clr="000" />
 						<br />
-						<!-- <BubbleText text="Group" default_clr="000" /> -->
 					</h3>
-					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-						beatae
-						obcaecati
-						sit
-						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
-					<div class="btn bg-black text-white rounded-full w-fit font-bold uppercase text-lg px-5">Learn More
+					<span class="w-4/5 text-2xl">
+						We gather on Sundays at 9:00 am! We are located at 1900 Clark Blvd Unit #4, Brampton, ON L6T
+						0E9, Canada.</span>
+
+					<h3 class="font-bold text-[2rem] leading-snug font-Cinzel mt-10">
+						<BubbleText text="Where Do I Park?" default_clr="000" />
+						<br />
+					</h3>
+					<span class="w-4/5 text-2xl">
+						There is a spacious area to park right around the building. We will have Door Holders scattered
+						throughout to help direct you where you need to go!</span>
+
+					<div class="btn bg-black text-white rounded-full w-fit font-bold uppercase text-lg px-5 mt-5">Learn
+						More
 					</div>
 				</div>
 
 				<div class="flex-1 relative">
 					<!-- img1 -->
 					<div ref="img1" class="absolute top-14 left-14 w-80 aspect-square img1">
-						<img src="../assets/talk.png" alt=""
+						<img src="https://live.staticflickr.com/65535/52947199654_7fbd5b3a81_o.jpg" alt=""
 							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
 					<div ref="img2" class="absolute bottom-10 right-10 w-80 aspect-square img2">
-						<img src="../assets/praying.png" alt=""
+						<img src="https://live.staticflickr.com/65535/52865328454_3edb969606_o.jpg" alt=""
 							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
 
@@ -212,41 +219,30 @@ const img2 = ref()
 let pressed = ref(false)
 let startX = ref()
 let x = ref()
-const dataCards = ref([
+const data = ref([
 	{
-		title: 'Alpha Hour',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'GENERATION LEADERSHIP COLLEGE',
+		body: 'Build your leadership skills and get hands-on experience in ministry. Through our partnership with Southeastern University, you can also work toward completing a degree.',
 	},
 	{
-		title: 'Chidren Time',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'BAPTISM',
+		body: 'Have you accepted Jesus? Take the next step in your faith and get baptized. Click below for more details.',
 	},
 	{
-		title: 'Mid-Week Service',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'CARE AND SUPPORT GROUPS',
+		body: 'LTWC offers a variety of supportive groups where you will find support and encouragement. Click below to learn more.',
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'YOUNG ADULTS',
+		body: "LTWC Young Adults is the perfect place to build lasting friendships, serve together, and study God's Word while making lifelong connections with other young adults.",
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'KIDS',
+		body: 'Kids are important to us at LTWC! Find out about our ministries for the little toddies (birth-preschool) and kids (kindergarten through 5th grade).',
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
-	},
-	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'SUNDAY SERVICES',
+		body: 'The large corporate gathering of our church community every Sunday. Our gathering is always centered on worshiping God, proclaiming God’s Word, and connecting with others.',
 	},
 ])
 

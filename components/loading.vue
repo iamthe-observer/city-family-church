@@ -30,17 +30,19 @@ const { loading } = storeToRefs(appStore())
 const { $gsap: gsap } = useNuxtApp()
 
 onMounted(() => {
+	window.scrollTo(0, 0);
+
 	const tl = gsap.timeline()
 	const txt_containers = gsap.utils.toArray('.txt-container')
-
 	document.body.style.overflow = 'hidden';
 
+
 	tl.to(txt_containers, {
-		delay: .8,
+		delay: .3,
 		opacity: 1,
 		duration: .1,
 		stagger: {
-			amount: .6,
+			amount: .2,
 			from: 'start',
 		},
 		ease: 'power4.inOut',
@@ -50,14 +52,14 @@ onMounted(() => {
 			opacity: 0,
 			ease: 'power4.inOut',
 			stagger: {
-				amount: .2,
+				amount: .1,
 				from: 'start',
 			}
 		})
 		.to('.loading-bg', {
 			filter: 'blur(0px)',
 			opacity: 0,
-			duration: 1,
+			duration: .3,
 			onComplete: () => {
 				document.querySelector<HTMLDivElement>('.loading-txt')!.classList.add('hidden');
 				document.querySelector<HTMLDivElement>('.loading-bg')!.classList.add('hidden');

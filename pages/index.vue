@@ -29,25 +29,26 @@
 				class="w-full min-h-[90vh] bg-white rounded-b-[70px] z-[10] flex p-10 py-12 gap-2 pt-20 section1 justify-center">
 				<div class="gap-10 flex flex-col justify-center w-1/2 pl-32">
 					<h3 class="font-bold text-[4rem] pb-2 leading-snug font-Cinzel">
-						<BubbleText text="The Head" default_clr="000" />
+						<BubbleText text="Why We Are" default_clr="000" />
 						<br />
-						<BubbleText text="Topic" default_clr="000" />
+						<BubbleText text="Here" default_clr="000" />
 					</h3>
-					<span class="w-4/5 text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi beatae
-						obcaecati
-						sit
-						doloremque illum ratione quam consequatur amet! Laudantium, praesentium.</span>
+					<span class="w-4/5 text-2xl">We exist to bring people to a personal relationship with Jesus Christ
+						and membership in His family; and to develop a Christ-like character; building and restoring
+						them through spiritual and economic development to become mature Christians, equipped for
+						ministry in the church, the community, and around the world, in order to declare God's
+						glory.</span>
 				</div>
 
 				<div class="flex-1 relative 1/2">
 					<!-- img1 -->
 					<div ref="img1" class="absolute top-0 right-1/2 translate-x-[90%] w-80 aspect-square img1">
-						<img src="../assets/talk.png" alt=""
+						<img src="../assets/edited/04.jpg" alt=""
 							class="hover:scale-125 transition-all duration-500 ease-in-out rounded-3xl shadow-xl object-cover w-full h-full brightness-50">
 					</div>
 					<!-- img2 -->
 					<div ref="img2" class="absolute bottom-0 left-1/2 translate-x-[-90%] w-80 aspect-square img2">
-						<img src="../assets/praying.png" alt=""
+						<img src="../assets/edited/08.jpg" alt=""
 							class="rounded-3xl hover:scale-110 transition-all duration-500 ease-in-out shadow-xl object-cover w-full h-full">
 					</div>
 
@@ -107,43 +108,46 @@
 		<!-- message 3 -->
 		<section class="w-full bg-white rounded-b-[70px flex-col flex rounded-b-[70px] section3 shadow-xl">
 			<div class="w-full bg-clrr1">
-				<h1 class="text-6xl font-black text-black bg-orange-400 pt-16 pl-20 rounded-t-[70px]">
+				<h1 class="text-6xl font-black text-black bg-orange-300 pt-16 pl-20 rounded-t-[70px]">
 					<div class="head-text font-Cinzel">
-						<BubbleText text="Lorem Text About Church" default_clr="fff" />
+						<BubbleText text="Find Your Place at City Family Church" default_clr="000" />
 
 					</div>
 				</h1>
 			</div>
-			<section class="w-full min-h-[600px] bg-orange-400 rounded-b-[70px] px-10 relative">
+
+			<section class="w-full min-h-[600px] bg-orange-300 rounded-b-[70px] px-10 relative">
 
 				<div class="Ccontainer">
 					<div class="items-container">
 
-						<div v-for="(item, i) in dataCards" :key="i" class="item flex flex-col p-10 justify-between">
-							<div class="flex flex-col gap-6 justify-between">
-								<div class="font-bold text-3xl font-Cinzel">{{ item.title }}</div>
+						<div v-for="(item, i) in data" :key="i" class="item flex flex-col p-10 justify-between">
+							<div class="flex flex-col gap-4 justify-between">
+								<div class="font-bold text-2xl font-Cinzel">{{ item.title }}</div>
 								<div class="font-medium">
 									{{ item.content }}
 								</div>
 							</div>
 							<div class="w-full flex justify-end">
 								<button
-									class="btn p-3 px-8 rounded-full bg-clrr2 text-black font-bold uppercase font-PlusSans hover:text-white hover:bg-black">{{
+									class="btn p-3 px-8 rounded-full bg-clrr2 text-black font-bold uppercase font-PlusSans hover:text-white hover:bg-black cursor-pointer">{{
 										item.action }}</button>
 							</div>
 
 						</div>
 					</div>
 				</div>
+
+				<div class="flex w-full items-center justify-end gap-2 absolute bottom-10 right-32">
+					<span class="drag_txt font-PlusSans font-lighter text-xl text-black font-semibold">Drag to
+						Scroll</span>
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 aspect-square" viewBox="0 0 14 14">
+						<path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+							d="m13.478 11.832l-.46-2.757a2.573 2.573 0 0 0-2.961-2.114l-2.171.362l-.683-4.09a1.194 1.194 0 0 0-1.374-.98v0c-.65.108-1.09.723-.98 1.374l.894 5.36l-.363.133a1.715 1.715 0 0 0-.643 2.803l.184.19l.954.988M1.75.5L.5 1.75L1.75 3M.5 1.75h3M10.25.5l1.25 1.25L10.25 3m1.25-1.25h-3" />
+					</svg>
+				</div>
+
 			</section>
-			<!-- end quote marquee -->
-			<!-- <section class="w-full h-[50vh] bg-white py-20 pb-60">
-				<Marquee2 :text="`JOHN 3:16`" class="text-[10vw] font-SpaceGrotesk" classer="px-10"></Marquee2 />
-				<marquee behavior="alternate" direction="left">
-					Your slide-in text goes here
-				</marquee>
-			</section>
- -->
 		</section>
 
 		<!-- space for footer to show -->
@@ -195,41 +199,37 @@ const img2 = ref()
 let pressed = ref(false)
 let startX = ref()
 let x = ref()
-const dataCards = ref([
+const data = ref([
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'New to the Living Truth?',
+		action: 'Get Started',
+		content: 'We believe that everyone at LTWC has the potential to find truth through Jesus and his teachings, and we are committed to creating a community where everyone can thrive.',
+		link: '/aboutLTWC',
+		link_text: 'Get Started',
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'Connect With Us',
+		content: 'Join our email list to get updates from Living Truth Worship Centre.',
+		action: 'Sign Up',
+		func: () =>
+			document
+				.getElementsByClassName('footer-container')[0]
+				.scrollIntoView({ behavior: 'smooth', block: 'start' }),
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'Join Us Online',
+		content: 'We gather online each Sunday at 9:30am - 11:45:am GMT. Join Us This Sunday!',
+		action: 'Watch us Live!',
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'Serve and Protect His Home',
+		content: 'Participate in all sort of activities that will contribute to the operations nad development of the chapel.',
+		action: 'Get Started',
 	},
 	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
-	},
-	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
-	},
-	{
-		title: 'Services',
-		content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quam in optio nostrum tempora sit, repellendus asperiores tenetur veniam nisi?',
-		action: 'Learn More'
+		title: 'Give',
+		action: 'Donate',
+		content: 'Your generosity will go a long way! God Bless you.',
 	},
 ])
 

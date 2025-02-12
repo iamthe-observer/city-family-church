@@ -93,33 +93,21 @@
 						class="p-2 w-fit mx-auto h-full rounded-3xl backdrop-blur-md bg-black/0 flex items-center justify-between gap-6 text-sm">
 						<div class="min-w-[300px] w-fit max-w-[700px] h-full flex items-center">
 							<span class="px-3 border-r border-black font-bold">SUNDAY SERVICES</span>
-							<span class="px-3 border-x border-black font-bold">9 AM</span>
-							<span class="px-3 border-x border-black font-bold">11 AM</span>
-							<span class="px-3 border-x border-black font-bold">4 PM</span>
+							<span class="px-3 border-x border-black font-bold">9:30 AM</span>
+							<span class="px-3 border-x border-black font-bold">12:30 PM</span>
+							<span class="px-3 border-x border-black font-bold">4:30 PM</span>
 							<span class="px-3 border-l border-black font-bold">WATCH ONLINE</span>
 						</div>
 						<div class="min-w-[300px] w-full max-w-[700px] h-full flex items-center">
 							<div class="marquee">
 								<div class="marquee-content">
-									<span>JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
-										SERVICE
-										HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
-										WEEK
-										SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN
-										MID
-										WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! |
-										JOIN
-										MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE
-										HERE! |
-										JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
-										SERVICE HERE!
-										| JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK
-										SERVICE
-										HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID
-										WEEK
-										SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN MID WEEK SERVICE HERE! | JOIN
-										MID
-										WEEK SERVICE HERE!</span>
+									<span>
+										JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN
+										1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 |
+										JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN
+										1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 | JOHN 1:14 |
+										JOHN 1:14 |
+									</span>
 								</div>
 							</div>
 						</div>
@@ -192,10 +180,10 @@ const routes = reactive([
 		name: 'About Us',
 		path: '/about',
 	},
-	{
-		name: 'Giving',
-		path: '/giving',
-	},
+	// {
+	// 	name: 'Giving',
+	// 	path: '/giving',
+	// },
 ])
 const opened = ref(false)
 let navTl: gsap.core.Timeline

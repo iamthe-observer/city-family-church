@@ -55,7 +55,9 @@
 										d="M128 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16" />
 								</svg>
 							</template>
-							{{ link }}
+							<NuxtLink :to="link.link">
+								{{ link.text }}
+							</NuxtLink>
 						</ListText>
 					</div>
 				</div>
@@ -89,12 +91,10 @@
 </template>
 
 <script setup lang="ts">
-const { $gsap: gsap } = useNuxtApp()
-
 const contactUs = ref({
 	addr0: 'CITY FAMILY CHURCH',
-	addr1: '9 ALPHA Rd, NR0 0AA',
-	email: 'ltwc-main@ltwc.com',
+	addr1: '1900 Clark Blvd Unit #4, Brampton, ON L6T 0E9, Canada.',
+	email: 'cfc-main@cfc.com',
 	phone: '+1 490-554-5543',
 })
 
@@ -106,11 +106,11 @@ const socials = ref([
 ])
 
 const links = ref([
-	'Home',
-	'About',
-	'Connect',
-	'Giving',
-	'Plan your visit',
+	{ link: '/', text: 'Home' },
+	{ link: '/about', text: 'About' },
+	{ link: '/connect', text: 'Connect' },
+	{ link: '/visit', text: 'Plan your visit' },
+	// { link: '/giving', text: 'Giving' },
 ])
 
 </script>
